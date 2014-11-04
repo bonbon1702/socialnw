@@ -22,10 +22,9 @@ class UserRepository implements IUserRepository
         $this->user = $user;
     }
 
-    public function errors()
+    public function errors($code)
     {
         // TODO: Implement errors() method.
-        return 'Sorry! Something is wrong!';
     }
 
     public function all(array $related = null)
@@ -47,8 +46,6 @@ class UserRepository implements IUserRepository
             } catch (Cartalyst\Sentry\Users\UserNotFoundException $e) {
                 echo 'User was not found.';
             }
-        } else {
-            $this->errors();
         }
 
         return $user;
@@ -77,12 +74,15 @@ class UserRepository implements IUserRepository
     public function create(array $data)
     {
         // TODO: Implement create() method.
+        if (Sentry::check() == true) return true;
+
         if (!empty($data)) {
             $count = $this->user->where('email', '=', $data['email'])->count();
 
+            $user = $this->getByEmail($data['email']);
             if (empty($count)) {
                 // Create the user
-                $user = Sentry::createUser(array(
+                $this->$user = Sentry::createUser(array(
                     'email' => $data['email'],
                     'persist_code' => $data['facebookId'],
                     'password' => $data['facebookId'],
@@ -90,9 +90,10 @@ class UserRepository implements IUserRepository
                     'activated' => true,
                 ));
             }
-            return true;
+            // Log the user in
+            Sentry::login($user, false);
         }
-        return false;
+        return true;
     }
 
     public function update(array $data)

@@ -9,7 +9,7 @@
 namespace Core;
 
 interface BaseRepository{
-    public function errors();
+    public function errors($code);
 
     public function all(array $related = null);
 

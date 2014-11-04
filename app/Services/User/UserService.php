@@ -21,40 +21,12 @@ class UserService implements  IUserService{
         $this->userRepository = $userRepository;
     }
 
-    public function errors()
-    {
-        // TODO: Implement errors() method.
-    }
-
-    public function all(array $related = null)
-    {
-        // TODO: Implement all() method.
-    }
-
-    public function get($id, array $related = null)
-    {
-        // TODO: Implement get() method.
-    }
-
-    public function getWhere($column, $value, array $related = null)
-    {
-        // TODO: Implement getWhere() method.
-    }
-
-    public function getRecent(array $related = null)
-    {
-        // TODO: Implement getRecent() method.
-        $user = $this->userRepository->getRecent();
-
-        return $user;
-    }
 
     public function create(array $data)
     {
         // TODO: Implement create() method.
-        $this->userRepository->create($data);
-
-        return true;
+        if ($this->userRepository->create($data)) return true;
+        else return false;
     }
 
     public function update(array $data)
@@ -62,20 +34,10 @@ class UserService implements  IUserService{
         // TODO: Implement update() method.
     }
 
-    public function delete($id)
-    {
-        // TODO: Implement delete() method.
-    }
 
-    public function deleteWhere($column, $value)
+    public function delete($column, $value)
     {
         // TODO: Implement deleteWhere() method.
-    }
-
-    public function getByEmail($email){
-        $user = $this->userRepository->getByEmail($email);
-
-        return $user;
     }
 
 }

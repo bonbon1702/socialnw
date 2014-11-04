@@ -39,7 +39,7 @@ class HomeController extends BaseController
 
     public function showHome()
     {
-        $user = $this->userService->getRecent();
+        $user = $this->userRepository->getRecent();
 
         return View::make('Homepage.home', array(
             'user' => $user

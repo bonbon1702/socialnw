@@ -52,19 +52,7 @@ class UserController extends BaseController
             );
 
             $url = action('HomeController@showHome');
-
             if ($this->userService->create($data)) {
-                try {
-                    $user = $this->userService->getByEmail($data['email']);
-                    // Log the user in
-
-                    Sentry::login($user, false);
-                } catch (Cartalyst\Sentry\Users\LoginRequiredException $e) {
-                    echo 'Login field is required.';
-                }
-
-                return Redirect::to($url);
-            } else {
                 return Redirect::to($url);
             }
         } // if not ask for permission first

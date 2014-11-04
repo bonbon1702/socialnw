@@ -7,7 +7,8 @@
  */
 namespace Services\User;
 
-use Core\BaseRepository as BaseRepository;
-interface IUserService extends BaseRepository{
+use Core\BaseService as BaseService;
+
+interface IUserService extends BaseService{
 
 }
