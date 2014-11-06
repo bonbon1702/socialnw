@@ -12,4 +12,7 @@
 */
 
 Route::get('/', 'HomeController@showHome');
-Route::get('/sign-in-with-facebook','UserController@signInWithFacebook');
+Route::get('/sign-in-with-facebook', array(
+    'uses' => 'UserController@signInWithFacebook',
+    'as' => 'fbSignIn'
+));

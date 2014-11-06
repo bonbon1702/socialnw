@@ -124,6 +124,7 @@ return array(
         'Barryvdh\Debugbar\ServiceProvider',
         'Cartalyst\Sentry\SentryServiceProvider',
         'Artdarek\OAuth\OAuthServiceProvider',
+        'Toin0u\Geotools\GeotoolsServiceProvider',
 	),
 
 	/*
@@ -193,6 +194,7 @@ return array(
         'Debugbar'        => 'Barryvdh\Debugbar\Facade',
         'Sentry'          => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
         'OAuth'           => 'Artdarek\OAuth\Facade\OAuth',
+        'Geotools'        => 'Toin0u\Geotools\GeotoolsFacade',
 	),
 
 );
