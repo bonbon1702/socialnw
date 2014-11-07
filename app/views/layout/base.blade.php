@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='MyApp'>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>
 
     <title>Home Page</title>
     <!-- Bootstrap -->
     <link href="css/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/css.css" rel="stylesheet">
 </head>
-<body>
+<body ng-controller='mainController'>
     {{--Header--}}
     @include('layout.header')
 
@@ -29,5 +31,6 @@
     <!-- load angularjs file -->
     <script src="js/app.js"></script> <!-- load our application -->
     <script src="js/controller/maincontroller.js"></script> <!-- load our controller -->
+    <script src="js/service/myService.js"></script> <!-- load our service -->
 </body>
 </html>

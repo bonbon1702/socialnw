@@ -1,8 +1,9 @@
 @extends('layout.base')
 
 @section('body')
-    <div id='content' ng-app='MyApp' ng-controller='MainController'>
-
-    </div>
-    {{ $render }}
+<div ng-controller="MapController">
+	<input id="pac-input" class="controls" type="text" placeholder="Search Box" />
+    <div id="map"></div>
+</div>
 @stop
+

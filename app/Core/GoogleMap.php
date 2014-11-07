@@ -39,7 +39,7 @@ class GoogleMap {
         $this->map->setPrefixJavascriptVariable('map_');
         $this->map->setHtmlContainerId('map_canvas');
 
-        $this->map->setAsync(false);
+        $this->map->setAsync(true);
         $this->map->setAutoZoom(false);
 
         $this->map->setCenter(21.0249399, 105.8457613, true);
