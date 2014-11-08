@@ -22,21 +22,46 @@
 
         $scope.map = null;
 
+
         /**
-            --------- Initiation Google Map
+        --------end-----------
         */
-        var mapOptions = {
-            zoom: 14,
-            center: new google.maps.LatLng(21.0249399, 105.8457613),
-            panControl: false,
-            zoomControl: false,
-            scaleControl: false,
-            streetViewControl: false,
-        }
 
         var markersDe = [];
 
         var markers = [];
+
+
+        /**
+            --------- Initiation Google Map
+        */
+        var haNoiLocation = new google.maps.LatLng(21.0249399, 105.8457613);
+        var myStyles = [
+        {
+            featureType: "poi",
+            elementType: "labels",
+            stylers: [{
+                visibility: "off"
+            }]
+        },
+        {
+            featureType: "transit",
+            elementType: "labels",
+            stylers: [{
+                visibility: "off"
+            }]
+        }];
+        var mapOptions = {
+            zoom: 14,
+            center: haNoiLocation,
+            panControl: false,
+            zoomControl: false,
+            scaleControl: false,
+            streetViewControl: false,
+            //scrollwheel: false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            styles: myStyles
+        }
 
         $scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
@@ -44,7 +69,7 @@
         ----------------end----------------------
         */
 
-        
+
         /**
             create search box Google Map
         */
