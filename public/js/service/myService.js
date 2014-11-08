@@ -1,20 +1,24 @@
 /**
  * Created by tuan on 11/6/2014.
  */
-angular.module('myService', [])
+(function(angular) {
+    angular.module('MyApp')
 
-    .factory('googleMap', function($http) {
+    .factory('googleMap', googleMap);
+
+    function googleMap() {
         return {
-            get : function() {
-                return $http.get('home');
-            },
-            save : function(dataPosition) {
-                return $http({
-                    method: 'POST',
-                    url: 'home',
-                    headers: { 'Content-Type' : 'application/x-www-form-urlencoded' },
-                    data: $.param(dataPosition)
-                });
-            }
+            createMarker: createMarker
         }
-    });
+    }
+
+    function createMarker(map, icon, position) {
+        icon = icon || null;
+        var marker = new google.maps.Marker({
+            position: position,
+            icon: icon,
+            map: map
+        });
+        return marker;
+    }
+})(angular);
