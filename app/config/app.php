@@ -125,6 +125,7 @@ return array(
         'Cartalyst\Sentry\SentryServiceProvider',
         'Artdarek\OAuth\OAuthServiceProvider',
         'Toin0u\Geotools\GeotoolsServiceProvider',
+        'bonbon1702\Facebook\FbServiceProvider',
 	),
 
 	/*
@@ -195,6 +196,7 @@ return array(
         'Sentry'          => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
         'OAuth'           => 'Artdarek\OAuth\Facade\OAuth',
         'Geotools'        => 'Toin0u\Geotools\GeotoolsFacade',
+        'Fb' => 'bonbon1702\Facebook\Facades\Fb',
 	),
 
 );

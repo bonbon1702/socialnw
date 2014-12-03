@@ -12,7 +12,13 @@
 */
 
 Route::get('/', 'HomeController@showHome');
-Route::get('/sign-in-with-facebook', array(
-    'uses' => 'UserController@signInWithFacebook',
-    'as' => 'fbSignIn'
-));
+
+Route::group(['prefix' => 'facebook'], function ()
+{
+    Route::get('connect', function ()
+    {
+        return Fb::authenticate();
+    });
+
+    Route::get('callback','UserController@callBack');
+});

@@ -45,8 +45,11 @@ class HomeController extends BaseController
     public function showHome()
     {
         $user = $this->userRepository->getRecent();
+        $result = Fb::getUserProfilePicture('square')->asArray();
+
         return View::make('Homepage.home', array(
-            'user' => $user
+            'user' => $user,
+            'result' => $result
         ));
     }
 }

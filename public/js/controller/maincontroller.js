@@ -167,6 +167,7 @@
 
             markers.push(marker);
             $scope.map.panTo(myLatlng);
+            $scope.map.setZoom(15);
 
             google.maps.event.addListener(marker, 'mouseover', function() {
                 infowindow.open($scope.map, marker);

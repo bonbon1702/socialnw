@@ -26,42 +26,21 @@ class UserController extends BaseController
         $this->userService = $userService;
     }
 
-    public function signInWithFacebook()
+    public function callBack()
     {
-        // get data from input
-        $code = Input::get('code');
+        $callback = Fb::check();
 
-        // get fb service
-        $fb = OAuth::consumer('Facebook');
-
-        // check if code is valid
-
-        // if code is provided get user data and sign in
-        if (!empty($code)) {
-
-            // This was a callback request from facebook, get the token
-            $token = $fb->requestAccessToken($code);
-
-            // Send a request with it
-            $result = json_decode($fb->request('/me'), true);
-
+        if ($callback){
+            $result = Fb::getProfile()->asArray();
             $data = array(
                 'facebookId' => $result['id'],
                 'username' => $result['name'],
                 'email' => $result['email']
             );
 
-            $url = action('HomeController@showHome');
             if ($this->userService->create($data)) {
-                return Redirect::to($url);
+                return Redirect::to('/');
             }
-        } // if not ask for permission first
-        else {
-            // get fb authorization
-            $url = $fb->getAuthorizationUri();
-
-            // return to facebook login url
-            return Redirect::to((string)$url);
         }
     }
 

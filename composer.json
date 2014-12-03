@@ -9,7 +9,8 @@
         "barryvdh/laravel-debugbar": "1.*",
         "cartalyst/sentry": "2.1.*",
         "egeloen/google-map": "dev-master",
-        "toin0u/geotools-laravel": "0.2.*"
+        "toin0u/geotools-laravel": "0.2.*",
+        "bonbon1702/facebooksdk": "dev-master"
 	},
 	"autoload": {
 		"classmap": [

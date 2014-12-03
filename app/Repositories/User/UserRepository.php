@@ -79,10 +79,9 @@ class UserRepository implements IUserRepository
         if (!empty($data)) {
             $count = $this->user->where('email', '=', $data['email'])->count();
 
-            $user = $this->getByEmail($data['email']);
             if (empty($count)) {
                 // Create the user
-                $this->$user = Sentry::createUser(array(
+                $user = Sentry::createUser(array(
                     'email' => $data['email'],
                     'persist_code' => $data['facebookId'],
                     'password' => $data['facebookId'],
@@ -90,6 +89,7 @@ class UserRepository implements IUserRepository
                     'activated' => true,
                 ));
             }
+            $user = $this->getByEmail($data['email']);
             // Log the user in
             Sentry::login($user, false);
         }

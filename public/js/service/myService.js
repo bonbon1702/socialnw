@@ -8,7 +8,7 @@
 
     function googleMap() {
         return {
-            createMarker: createMarker
+            createMarker: createMarker,
         }
     }
 

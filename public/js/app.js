@@ -4,6 +4,6 @@
 (function(angular) {
     angular
         .module('MyApp', [
-
+        
         ]);
 })(angular);
