@@ -32,10 +32,12 @@ class UserController extends BaseController
 
         if ($callback){
             $result = Fb::getProfile()->asArray();
+            $pictureProfile = Fb::getUserProfilePicture('square')->asArray();
             $data = array(
                 'facebookId' => $result['id'],
                 'username' => $result['name'],
-                'email' => $result['email']
+                'email' => $result['email'],
+                'picture_profile' => $pictureProfile['url']
             );
 
             if ($this->userService->create($data)) {

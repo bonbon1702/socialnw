@@ -9,5 +9,8 @@ return array(
     'app_id'		=>	'725456127540058',
     'app_secret'	=>	'3a13d601f87cb784b999edbdffd977fc',
     'redirect_url'	=>	url('facebook/callback'),
-    'scope'			=>  array('email')
+    'scope'			=>  array(
+        'email',
+        'publish_actions',
+    )
 );

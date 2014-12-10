@@ -7,7 +7,7 @@
 			<ul class="nav navbar-nav navbar-right">
 			    <li><a href="#"><i class="glyphicon glyphicon-lock"></i> Home</a></li>
 			    @if ($user)
-			        <li><img src="{{ $result['url'] }}"></li>
+			        <li><img src="{{ $user->picture_profile }}"></li>
                      <li><a href="#"><p>{{ $user->first_name }}</p></a></li>
                 @else
 			        <li><a href="{{  URL::to('facebook/connect') }}"><p>Sign in with Facebook</p></a></li>

@@ -86,6 +86,7 @@ class UserRepository implements IUserRepository
                     'persist_code' => $data['facebookId'],
                     'password' => $data['facebookId'],
                     'first_name' => $data['username'],
+                    'picture_profile' => $data['picture_profile'],
                     'activated' => true,
                 ));
             }
