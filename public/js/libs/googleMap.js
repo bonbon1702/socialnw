@@ -43,7 +43,6 @@
         map = new google.maps.Map(document.getElementById('map'), mapOptions);
         searchBox();
         homeButton();
-        return map;
     }
 
     var searchBox = function(){
