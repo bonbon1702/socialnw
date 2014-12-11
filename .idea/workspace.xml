@@ -1,15 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2f7c0725-33ce-419a-886c-5bfb5022cad7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/templates/example.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/libs/ngDialog-theme-plain.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/libs/ngDialog.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/libs/ngDialog.min.js" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\projects\socialnw\public\js\libs\angular-google-maps.min.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app.js" afterPath="$PROJECT_DIR$/public/js/app.js" />
+    <list default="true" id="2f7c0725-33ce-419a-886c-5bfb5022cad7" name="Default" comment=" Restructure Code">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/home/homeController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/app/home/homeService.js" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\projects\socialnw\public\js\controller\maincontroller.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\projects\socialnw\public\js\service\myService.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\projects\socialnw\public\templates\example.html" afterPath="" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\projects\socialnw\public\css\css.css" afterPath="$PROJECT_DIR$/public/assets/css/css.css" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\projects\socialnw\public\css\dist\css\bootstrap-theme.css" afterPath="$PROJECT_DIR$/public/assets/css/dist/css/bootstrap-theme.css" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\projects\socialnw\public\css\dist\css\bootstrap-theme.css.map" afterPath="$PROJECT_DIR$/public/assets/css/dist/css/bootstrap-theme.css.map" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\projects\socialnw\public\css\dist\css\bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/public/assets/css/dist/css/bootstrap-theme.min.css" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\projects\socialnw\public\css\dist\css\bootstrap.css" afterPath="$PROJECT_DIR$/public/assets/css/dist/css/bootstrap.css" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\projects\socialnw\public\css\dist\css\bootstrap.css.map" afterPath="$PROJECT_DIR$/public/assets/css/dist/css/bootstrap.css.map" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\projects\socialnw\public\css\dist\css\bootstrap.min.css" afterPath="$PROJECT_DIR$/public/assets/css/dist/css/bootstrap.min.css" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\projects\socialnw\public\css\dist\fonts\glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/public/assets/css/dist/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\projects\socialnw\public\css\dist\fonts\glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/public/assets/css/dist/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\projects\socialnw\public\css\dist\fonts\glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/public/assets/css/dist/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\projects\socialnw\public\css\dist\fonts\glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/public/assets/css/dist/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\projects\socialnw\public\css\dist\js\bootstrap.js" afterPath="$PROJECT_DIR$/public/assets/css/dist/js/bootstrap.js" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\projects\socialnw\public\css\dist\js\bootstrap.min.js" afterPath="$PROJECT_DIR$/public/assets/css/dist/js/bootstrap.min.js" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\projects\socialnw\public\css\dist\js\npm.js" afterPath="$PROJECT_DIR$/public/assets/css/dist/js/npm.js" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\projects\socialnw\public\css\libs\ngDialog-theme-plain.min.css" afterPath="$PROJECT_DIR$/public/assets/css/libs/ngDialog-theme-plain.min.css" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\projects\socialnw\public\css\libs\ngDialog.min.css" afterPath="$PROJECT_DIR$/public/assets/css/libs/ngDialog.min.css" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\projects\socialnw\public\js\app.js" afterPath="$PROJECT_DIR$/public/app/app.js" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\projects\socialnw\public\js\libs\angular-mocks.js" afterPath="$PROJECT_DIR$/public/assets/js/libs/angular-mocks.js" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\projects\socialnw\public\js\libs\angular-ui-router.min.js" afterPath="$PROJECT_DIR$/public/assets/js/libs/angular-ui-router.min.js" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\projects\socialnw\public\js\libs\angular.js" afterPath="$PROJECT_DIR$/public/assets/js/libs/angular.js" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\projects\socialnw\public\js\libs\googleMap.js" afterPath="$PROJECT_DIR$/public/assets/js/googleMap.js" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\projects\socialnw\public\js\libs\jquery-1.10.2.js" afterPath="$PROJECT_DIR$/public/assets/js/libs/jquery-1.10.2.js" />
+      <change type="MOVED" beforePath="C:\xampp\htdocs\projects\socialnw\public\js\libs\ngDialog.min.js" afterPath="$PROJECT_DIR$/public/assets/js/libs/ngDialog.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layout/base.blade.php" afterPath="$PROJECT_DIR$/app/views/layout/base.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/controller/maincontroller.js" afterPath="$PROJECT_DIR$/public/js/controller/maincontroller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Homepage/home.blade.php" afterPath="$PROJECT_DIR$/app/views/Homepage/home.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="socialnw.iws" />
@@ -55,58 +77,7 @@
     <favorites_list name="socialnw" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="maincontroller.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/js/controller/maincontroller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34871796" vertical-offset="34" max-vertical-offset="3910">
-              <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="example.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/templates/example.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="136">
-              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-              <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/Homepage/home.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="255">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layout/base.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.5384614" vertical-offset="163" max-vertical-offset="748">
-              <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -138,7 +109,6 @@
         <option value="$PROJECT_DIR$/app/Core/Map.php" />
         <option value="$PROJECT_DIR$/app/Core/GoogleMapHelper.php" />
         <option value="$PROJECT_DIR$/app/Core/GoogleMap.php" />
-        <option value="$PROJECT_DIR$/public/js/service/myService.js" />
         <option value="$PROJECT_DIR$/public/css/css.css" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/config/app.php" />
@@ -152,12 +122,16 @@
         <option value="$PROJECT_DIR$/app/controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/public/js/libs/ngDialog.min.js" />
         <option value="$PROJECT_DIR$/public/css/libs/ngDialog.min.css" />
-        <option value="$PROJECT_DIR$/public/js/app.js" />
         <option value="$PROJECT_DIR$/public/templates/example.html" />
         <option value="$PROJECT_DIR$/public/css/libs/ngDialog-theme-default.min.css" />
-        <option value="$PROJECT_DIR$/app/views/layout/base.blade.php" />
+        <option value="$PROJECT_DIR$/public/js/app.js" />
+        <option value="$PROJECT_DIR$/public/js/libs/googleMapFix.js" />
+        <option value="$PROJECT_DIR$/public/js/service/myService.js" />
+        <option value="$PROJECT_DIR$/public/js/libs/googleMap.js" />
         <option value="$PROJECT_DIR$/public/js/controller/maincontroller.js" />
+        <option value="$PROJECT_DIR$/public/app/home/maincontroller.js" />
         <option value="$PROJECT_DIR$/app/views/Homepage/home.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/layout/base.blade.php" />
       </list>
     </option>
   </component>
@@ -240,7 +214,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -258,7 +232,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -276,11 +250,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
+              <option name="myItemId" value="home" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -383,8 +357,11 @@
       <recent name="C:\xampp\htdocs\projects\socialnw\public\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\projects\socialnw\public\assets\js" />
+      <recent name="C:\xampp\htdocs\projects\socialnw\public\assets" />
+      <recent name="C:\xampp\htdocs\projects\socialnw\public\app\home" />
+      <recent name="C:\xampp\htdocs\projects\socialnw\public\app" />
       <recent name="C:\xampp\htdocs\projects\socialnw\app\Repositories\User" />
-      <recent name="C:\xampp\htdocs\projects\socialnw\public\js\controller" />
     </key>
   </component>
   <component name="RunManager">
@@ -486,7 +463,25 @@
       <option name="project" value="LOCAL" />
       <updated>1418221420093</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add ngDialog">
+      <created>1418305584634</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1418305584634</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Add googleMap.js">
+      <created>1418307911700</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1418307911700</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Add googleMap.js">
+      <created>1418308081536</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1418308081536</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -513,22 +508,22 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.70424837" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4493464" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40359476" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3251634" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22390318" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2965204" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2965204" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32626426" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7047308" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -554,7 +549,10 @@
     <MESSAGE value="add GoogleMap, GoogleMap Helper" />
     <MESSAGE value="Add Button(find current location) + Search box Google Map" />
     <MESSAGE value="Add bonbon1702/facebookSdk package" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add bonbon1702/facebookSdk package" />
+    <MESSAGE value="Add ngDialog" />
+    <MESSAGE value="Add googleMap.js" />
+    <MESSAGE value=" Restructure Code" />
+    <option name="LAST_COMMIT_MESSAGE" value=" Restructure Code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -563,14 +561,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/layout/base.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="163" max-vertical-offset="748">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/BaseController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="607">
@@ -714,7 +704,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/libs/angular.js">
+    <entry file="file://$PROJECT_DIR$/public/assets/js/libs/angular.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="372759">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -725,13 +715,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="1632">
           <caret line="44" column="53" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/css.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="430" max-vertical-offset="1037">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -750,13 +733,6 @@
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/service/myService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Session/Store.php">
@@ -864,7 +840,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/libs/ngDialog.min.js">
+    <entry file="file://$PROJECT_DIR$/public/assets/js/libs/ngDialog.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="571">
           <caret line="0" column="6319" selection-start-line="0" selection-start-column="6319" selection-end-line="0" selection-end-column="6319" />
@@ -878,56 +854,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/libs/ngDialog.min.css">
+    <entry file="file://$PROJECT_DIR$/public/assets/css/libs/ngDialog.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="571">
           <caret line="0" column="1251" selection-start-line="0" selection-start-column="1251" selection-end-line="0" selection-end-column="1251" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/libs/ngDialog-theme-plain.min.css">
+    <entry file="file://$PROJECT_DIR$/public/assets/css/libs/ngDialog-theme-plain.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="572">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/example.html">
+    <entry file="file://$PROJECT_DIR$/public/assets/css/css.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="136">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        <state vertical-scroll-proportion="1.2722603" vertical-offset="124" max-vertical-offset="1037">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layout/base.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/app/home/homeService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.5384614" vertical-offset="163" max-vertical-offset="748">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.11643836" vertical-offset="0" max-vertical-offset="584">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/Homepage/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="255">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.09139785" vertical-offset="0" max-vertical-offset="558">
+          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/controller/maincontroller.js">
+    <entry file="file://$PROJECT_DIR$/public/assets/js/googleMap.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34871796" vertical-offset="34" max-vertical-offset="3910">
-          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+        <state vertical-scroll-proportion="1.0291096" vertical-offset="147" max-vertical-offset="3281">
+          <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17465754" vertical-offset="0" max-vertical-offset="584">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layout/base.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.346153" vertical-offset="204" max-vertical-offset="765">
+          <caret line="37" column="37" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/home/homeController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17465754" vertical-offset="0" max-vertical-offset="584">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
