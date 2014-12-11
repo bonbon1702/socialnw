@@ -6,10 +6,15 @@
         .controller('mainController', mainController)
         .controller('MapController', mapController);
 
-    mainController.$inject = ['$scope'];
+    mainController.$inject = ['$scope', 'ngDialog'];
 
-    function mainController($scope) {
-
+    function mainController($scope, ngDialog) {
+        $scope.clickToOpen = function () {
+            ngDialog.open({
+                template: 'templates/example.html',
+                className: 'ngdialog-theme-plain'
+            });
+        };
     }
 
     mapController.$inject = ['$scope', 'googleMap'];
