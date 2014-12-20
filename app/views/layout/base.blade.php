@@ -12,6 +12,9 @@
     <link href="assets/css/css.css" rel="stylesheet">
     <link href="assets/css/libs/ngDialog.min.css" rel="stylesheet">
     <link href="assets/css/libs/ngDialog-theme-plain.min.css" rel="stylesheet">
+    <link href="assets/css/autocomplete.css" rel="stylesheet">
+    <link href="assets/css/magiccard.css" rel="stylesheet">
+    <link href="assets/css/libs/animations.css" rel="stylesheet">
 </head>
 <body>
     {{--Header--}}
@@ -31,6 +34,8 @@
     <script src="assets/css/dist/js/bootstrap.min.js"></script>
     <script src="assets/js/libs/ngDialog.min.js"></script>
     <script src="assets/js/googleMap.js"></script>
+    <script src="assets/js/magicSearch.js"></script>
+    <script src="assets/js/magiccard.js"></script>
 
     <!-- load angularjs file -->
     <script src="app/app.js"></script> <!-- load our application -->

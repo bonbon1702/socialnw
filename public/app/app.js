@@ -4,6 +4,8 @@
 (function(angular) {
     angular
         .module('MyApp', [
-            'ngDialog'
+            'ngDialog',
+            'magicsearch',
+            'magiccard'
         ]);
 })(angular);
