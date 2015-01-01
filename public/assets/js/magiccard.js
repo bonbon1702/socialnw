@@ -13,7 +13,7 @@ app.directive('magiccard', function () {
                         magiccard.hide();
                         scope.completing = true;
                         return;
-                    } else if (scope.onTyping == false) {
+                    } else if (scope.onTyping == false && scope.onTag == true) {
                         var position = scope.findPos(e, element[0]);
                         var positionDialog = {
                             top: position.PosY + 50,
@@ -53,6 +53,7 @@ app.directive('magiccard', function () {
                         var box = angular.element(this).parent().parent();
                         box.remove();
                         scope.completing = true;
+                        scope.onTyping = false;
                     });
 
                     angular.element(element[0]).find(".magiccard .item-tag").mouseenter(function () {
@@ -76,14 +77,14 @@ app.directive('magiccard', function () {
                     var points = scope.data;
                     for (var i = 0; i < points.length; i++) {
                         var position = {
-                            top: parseInt(points[i].top),
+                            top: parseInt(points[i].top) +31,
                             left: parseInt(points[i].left)
                         };
                         var point = angular.element(
                             '<div class="magiccard">'
                             + '<span class="item-tag">\
                             <span class="item-tag-label">\
-                                <i class="fa fa-star fa-2x"></i>\
+                                <i class="mpcth-price">'+ accounting.formatNumber(points[i].price) +'</i>\
                             </span></span>'
                             + '<div class="magiccard-content bigEntrance" style="display: none">'
                             + '<h3>' + points[i].name + '</h3>'
@@ -105,12 +106,24 @@ app.directive('magiccard', function () {
 
             }
 
+            angular.element(document).find("button#tagButton").bind('click',function(){
+                scope.tagSwitch();
+            });
+
         }
 
         function controller($scope, $http) {
             $scope.completing = true;
             $scope.onTyping = false;
-
+            $scope.onTag = false;
+            $scope.tagSwitch = function() {
+                if ($scope.onTag == false){
+                    $scope.onTag = true;
+                } else {
+                    $scope.onTag = false;
+                }
+                $scope.$apply();
+            };
             this.findPosImg = function (oElement) {
                 if (typeof( oElement.offsetParent ) != "undefined") {
                     for (var posX = 0, posY = 0; oElement; oElement = oElement.offsetParent) {
@@ -155,6 +168,7 @@ app.directive('magiccard', function () {
             $http.get($scope.templateBox).then(function (template) {
                 $scope.templ = template.data;
             });
+
         }
 
         return {
@@ -174,3 +188,10 @@ app.directive('magiccard', function () {
     }
 );
 
+app.directive('eatClick', function() {
+    return function(scope, element, attrs) {
+        $(element).click(function(event) {
+            event.preventDefault();
+        });
+    }
+})

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app='MyApp'>
+<html ng-app="MyApp">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,13 +8,13 @@
 
     <title>Home Page</title>
     <!-- Bootstrap -->
-    <link href="assets/css/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/css.css" rel="stylesheet">
-    <link href="assets/css/libs/ngDialog.min.css" rel="stylesheet">
-    <link href="assets/css/libs/ngDialog-theme-plain.min.css" rel="stylesheet">
-    <link href="assets/css/autocomplete.css" rel="stylesheet">
-    <link href="assets/css/magiccard.css" rel="stylesheet">
-    <link href="assets/css/libs/animations.css" rel="stylesheet">
+    {{ HTML::style('assets/css/dist/css/bootstrap.min.css') }}
+    {{ HTML::style('assets/css/css.css') }}
+    {{ HTML::style('assets/css/libs/ngDialog.min.css') }}
+    {{ HTML::style('assets/css/libs/ngDialog-theme-plain.min.css') }}
+    {{ HTML::style('assets/css/autocomplete.css') }}
+    {{ HTML::style('assets/css/magiccard.css') }}
+    {{ HTML::style('assets/css/libs/animations.css') }}
 </head>
 <body>
     {{--Header--}}
@@ -27,19 +27,43 @@
     @include('layout.footer')
 
     <!-- load libs -->
-    <script src="assets/js/libs/jquery-1.10.2.js"></script>
-   	<script src="assets/js/libs/angular.js"></script>
-    <script src="assets/js/libs/angular-ui-router.min.js"></script>
-    <script src="assets/js/libs/angular-mocks.js"></script>
-    <script src="assets/css/dist/js/bootstrap.min.js"></script>
-    <script src="assets/js/libs/ngDialog.min.js"></script>
-    <script src="assets/js/googleMap.js"></script>
-    <script src="assets/js/magicSearch.js"></script>
-    <script src="assets/js/magiccard.js"></script>
+    {{ HTML::script('assets/js/libs/jquery.js') }}
+   	{{ HTML::script('assets/js/libs/angular.js') }}
+    {{ HTML::script('assets/css/dist/js/bootstrap.min.js') }}
+    {{ HTML::script('assets/js/libs/ngDialog.min.js') }}
+    {{ HTML::script('assets/js/googleMap.js') }}
+    {{ HTML::script('assets/js/magicSearch.js') }}
+    {{ HTML::script('assets/js/magiccard_ver2.js') }}
+    {{ HTML::script('assets/js/libs/accounting.min.js') }}
+    {{ HTML::script('assets/js/js.js') }}
+    {{ HTML::script('assets/js/autocomplete.js') }}
+
 
     <!-- load angularjs file -->
-    <script src="app/app.js"></script> <!-- load our application -->
-    <script src="app/home/homeController.js"></script>
-    <script src="app/home/homeService.js"></script>
+    {{ HTML::script('app/app.js') }} <!-- load our application -->
+
+    {{--home--}}
+    {{ HTML::script('app/home/homeController.js') }}
+    {{ HTML::script('app/home/homeService.js') }}
+
+    {{--user--}}
+    {{ HTML::script('app/user/userController.js') }}
+    {{ HTML::script('app/user/userService.js') }}
+
+    {{--shop--}}
+    {{ HTML::script('app/shop/shopController.js') }}
+    {{ HTML::script('app/shop/shopService.js') }}
+
+    {{--caption--}}
+    {{ HTML::script('app/home/captionController.js') }}
+    {{ HTML::script('app/home/captionService.js') }}
+
+    {{--editor--}}
+    {{ HTML::script('app/home/editorController.js') }}
+    {{ HTML::script('app/home/editorService.js') }}
+
+    {{--post--}}
+    {{ HTML::script('app/post/postController.js') }}
+    {{ HTML::script('app/post/postService.js') }}
 </body>
 </html>

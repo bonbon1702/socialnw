@@ -10,7 +10,9 @@
 			        <li><img src="{{ $user->picture_profile }}"></li>
                      <li><a href="#"><p>{{ $user->first_name }}</p></a></li>
                 @else
-			        <li><a href="{{  URL::to('facebook/connect') }}"><p>Sign in with Facebook</p></a></li>
+			        <li><a href="{{  URL::to('connect/facebook') }}"><p>Sign in with Facebook</p></a></li>
+			        <li><a href="{{  URL::to('connect/google') }}"><p>Sign in with Google</p></a></li>
+			        <li><a href="{{  URL::to('connect/twitter') }}"><p>Sign in with Twitter</p></a></li>
 			    @endif
 			</ul>
 		</div>

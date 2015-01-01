@@ -1,13 +1,13 @@
 /**
  * Created by tuan on 11/1/2014.
  */
-(function(angular) {
+(function (angular) {
     angular.module('MyApp')
         .controller('homeController', homeController);
 
-    homeController.$inject = ['$scope'];
+    homeController.$inject = ['$scope', 'ngDialog'];
 
-    function homeController($scope) {
+    function homeController($scope, ngDialog) {
         //googleMap.init();
         //$scope.movies = [
         //    {
@@ -35,21 +35,21 @@
         //    console.log(text);
         //}
         //
-        //$scope.templateBox ='app/home/templates/templateBox.html';
-        //$scope.image = 'http://dwaynepreed.files.wordpress.com/2014/10/beautiful-girl-3.jpg';
         //$scope.points = [
         //    {
         //        name: 'ao thoi trang',
+        //        price: '140000',
         //        top: "241",
         //        left: "358"
         //    },
         //    {
         //        name: 'quan thoi trang',
+        //        price: '55000',
         //        top: "181",
         //        left: "312"
         //    }
         //];
-        //$scope.callback = function(point){
+        //$scope.callback = function (point) {
         //    var point = {
         //        name: point[2],
         //        top: point[0],
@@ -57,8 +57,14 @@
         //    };
         //    $scope.points.push(point);
         //    $scope.$apply();
-        //    console.log(point);
         //}
-
+        //$scope.clickToOpen = function () {
+        //
+        //    ngDialog.open({
+        //        template: 'app/home/templates/templateTag.html',
+        //        className: 'ngdialog-theme-plain'
+        //    });
+        //};
     }
 })(angular);
+

@@ -8,20 +8,12 @@
 
 namespace Repositories\User;
 
+use Illuminate\Support\Facades\Auth;
 use Repositories\User\IUserRepository as IUserRepository;
-
-use \Sentry as Sentry;
+use \User;
 
 class UserRepository implements IUserRepository
 {
-
-    private $user;
-
-    public function __construct(\User $user)
-    {
-        $this->user = $user;
-    }
-
     public function errors($code)
     {
         // TODO: Implement errors() method.
@@ -30,7 +22,7 @@ class UserRepository implements IUserRepository
     public function all(array $related = null)
     {
         // TODO: Implement all() method.
-        $users = Sentry::findAllUsers();
+        $users = User::all();
 
         return $users;
     }
@@ -41,11 +33,7 @@ class UserRepository implements IUserRepository
         $user = null;
 
         if (!empty($id)) {
-            try {
-                $user = Sentry::findUserById($id);
-            } catch (Cartalyst\Sentry\Users\UserNotFoundException $e) {
-                echo 'User was not found.';
-            }
+            $user = User::find($id);
         }
 
         return $user;
@@ -54,45 +42,27 @@ class UserRepository implements IUserRepository
     public function getWhere($column, $value, array $related = null)
     {
 
-
     }
 
     public function getRecent(array $related = null)
     {
         // TODO: Implement getRecent() method.
-        $user = null;
-        try {
-            // Get the current logged in user
-            $user = Sentry::getUser();
-
-        } catch (Cartalyst\Sentry\Users\UserNotFoundException $e) {
-            echo 'No User is logged';
-        }
+        $user = Auth::user();
         return $user;
     }
 
     public function create(array $data)
     {
         // TODO: Implement create() method.
-        if (Sentry::check() == true) return true;
-
         if (!empty($data)) {
-            $count = $this->user->where('email', '=', $data['email'])->count();
+            $user = User::firstOrCreate(array(
+                'email' => $data['email'],
+                'username' => $data['username'],
+                'picture_profile' => $data['picture_profile'],
+                'gender' => $data['gender']
+            ));
 
-            if (empty($count)) {
-                // Create the user
-                $user = Sentry::createUser(array(
-                    'email' => $data['email'],
-                    'persist_code' => $data['facebookId'],
-                    'password' => $data['facebookId'],
-                    'first_name' => $data['username'],
-                    'picture_profile' => $data['picture_profile'],
-                    'activated' => true,
-                ));
-            }
-            $user = $this->getByEmail($data['email']);
-            // Log the user in
-            Sentry::login($user, false);
+            Auth::login($user);
         }
         return true;
     }
@@ -111,19 +81,4 @@ class UserRepository implements IUserRepository
     {
         // TODO: Implement deleteWhere() method.
     }
-
-    public function getByEmail($email)
-    {
-        $user = null;
-
-        if (!empty($email)) {
-            $user = Sentry::findUserByCredentials(array(
-                'email' => $email
-            ));
-        }
-
-        return $user;
-    }
-
-
 }

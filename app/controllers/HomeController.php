@@ -50,4 +50,22 @@ class HomeController extends BaseController
             'user' => $user
         ));
     }
+
+    public function editor()
+    {
+        $user = $this->userRepository->getRecent();
+
+        return View::make('Homepage.editor', array(
+            'user' => $user
+        ));
+    }
+
+    public function caption()
+    {
+        $user = $this->userRepository->getRecent();
+
+        return View::make('Homepage.caption', array(
+            'user' => $user
+        ));
+    }
 }

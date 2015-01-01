@@ -7,10 +7,8 @@
 		"laravel/framework": "4.2.*",
         "artdarek/oauth-4-laravel": "dev-master",
         "barryvdh/laravel-debugbar": "1.*",
-        "cartalyst/sentry": "2.1.*",
-        "egeloen/google-map": "dev-master",
         "toin0u/geotools-laravel": "0.2.*",
-        "bonbon1702/facebooksdk": "dev-master"
+        "way/generators": "~2.0"
 	},
 	"autoload": {
 		"classmap": [

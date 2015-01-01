@@ -45,6 +45,22 @@
     padding-left: 17px;
     padding-top: 10px;
 }
+.item-tag-1{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    color: #fff;
+    line-height: 18px;
+    z-index: 9;
+    border-radius: 50%;
+    background-color: black;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    margin-left: 17px;
+}
 .item-tag-label {
     font-weight: bold;
 }
@@ -54,4 +70,19 @@
 }
 .visible-box{
     visibility: visible;
+}
+.mpcth-price{
+    z-index: 1;
+    position: absolute;
+    color: white!important;
+    font-weight: bold;
+    top: -39px;
+    left: 13px;
+    font-size: 14px !important;
+    background: rgba(187, 17, 79, 0.8) !important;
+    width: 70px !important;
+    text-align: center !important;
+    height: 70px !important;
+    line-height: 70px !important;
+    border-radius: 35px !important;
 }

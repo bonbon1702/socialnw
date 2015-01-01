@@ -122,10 +122,9 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
         'Barryvdh\Debugbar\ServiceProvider',
-        'Cartalyst\Sentry\SentryServiceProvider',
         'Artdarek\OAuth\OAuthServiceProvider',
         'Toin0u\Geotools\GeotoolsServiceProvider',
-        'bonbon1702\Facebook\FbServiceProvider',
+        'Way\Generators\GeneratorsServiceProvider'
 	),
 
 	/*
@@ -193,10 +192,8 @@ return array(
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
         'Debugbar'        => 'Barryvdh\Debugbar\Facade',
-        'Sentry'          => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
         'OAuth'           => 'Artdarek\OAuth\Facade\OAuth',
         'Geotools'        => 'Toin0u\Geotools\GeotoolsFacade',
-        'Fb' => 'bonbon1702\Facebook\Facades\Fb',
 	),
 
 );

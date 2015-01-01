@@ -6,6 +6,7 @@
         .module('MyApp', [
             'ngDialog',
             'magicsearch',
-            'magiccard'
+            'magiccard',
+            'autocomplete'
         ]);
 })(angular);

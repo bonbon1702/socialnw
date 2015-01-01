@@ -13,12 +13,25 @@
 
 Route::get('/', 'HomeController@showHome');
 
-Route::group(['prefix' => 'facebook'], function ()
-{
-    Route::get('connect', function ()
-    {
-        return Fb::authenticate();
-    });
+Route::get('/editor','HomeController@editor');
 
-    Route::get('callback','UserController@callBack');
+Route::get('/caption', 'HomeController@caption');
+
+Route::get('/post/{id}','PostController@show');
+
+Route::get('/{name}','UserController@showUser');
+
+Route::get('/shop/{name}','ShopController@showShop');
+
+Route::group(array('prefix' => 'connect'), function()
+{
+    Route::get('/facebook', 'UserController@loginWithFacebook');
+
+    Route::get('/google', 'UserController@loginWithGoogle');
+
+    Route::get('/twitter', 'UserController@loginWithTwitter');
+});
+
+App::missing(function($exception) {
+    return Redirect::to('/');
 });

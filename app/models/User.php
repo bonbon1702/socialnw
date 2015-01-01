@@ -4,9 +4,8 @@ use Illuminate\Auth\UserTrait;
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
-use Cartalyst\Sentry\Users\Eloquent\User as SentryUserModel;
 
-class User extends SentryUserModel implements UserInterface, RemindableInterface{
+class User extends \Eloquent implements UserInterface, RemindableInterface{
 
 	use UserTrait, RemindableTrait;
 	/**
@@ -23,34 +22,7 @@ class User extends SentryUserModel implements UserInterface, RemindableInterface
 	 */
 	protected $hidden = array('password', 'remember_token');
 
-    public static function boot()
-    {
-        self::$hasher = new \Cartalyst\Sentry\Hashing\NativeHasher;
-    }
+    public $timestamps = true;
 
-    public function getAuthIdentifier()
-    {
-        return $this->getKey();
-    }
-
-
-    public function getAuthPassword()
-    {
-
-    }
-
-    public function getRememberToken()
-    {
-
-    }
-
-    public function setRememberToken($value)
-    {
-
-    }
-
-    public function getRememberTokenName()
-    {
-
-    }
+    protected $guarded = array();
 }

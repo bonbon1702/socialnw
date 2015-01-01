@@ -12,7 +12,8 @@ use Services\User\IUserService as IUserService;
 use Repositories\User\IUserRepository as IUserRepository;
 use Artdarek\OAuth\Facade\OAuth;
 
-class UserService implements  IUserService{
+class UserService implements IUserService
+{
 
     private $userRepository;
 
