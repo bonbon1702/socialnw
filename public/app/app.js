@@ -7,6 +7,7 @@
             'ngDialog',
             'magicsearch',
             'magiccard',
-            'autocomplete'
+            'autocomplete',
+            'lazyloading'
         ]);
 })(angular);
