@@ -37,6 +37,7 @@
     {{ HTML::script('assets/js/libs/accounting.min.js') }}
     {{ HTML::script('assets/js/js.js') }}
     {{ HTML::script('assets/js/autocomplete.js') }}
+    {{ HTML::script('assets/js/lazyloading_v2.js') }}
 
 
     <!-- load angularjs file -->
