@@ -15,6 +15,7 @@
     {{ HTML::style('assets/css/autocomplete.css') }}
     {{ HTML::style('assets/css/magiccard.css') }}
     {{ HTML::style('assets/css/libs/animations.css') }}
+    {{ HTML::style('assets/css/libs/loading-bar.min.css') }}
 </head>
 <body>
     {{--Header--}}
@@ -38,6 +39,7 @@
     {{ HTML::script('assets/js/js.js') }}
     {{ HTML::script('assets/js/autocomplete.js') }}
     {{ HTML::script('assets/js/lazyloading_v2.js') }}
+    {{ HTML::script('assets/js/libs/loading-bar.min.js') }}
 
 
     <!-- load angularjs file -->

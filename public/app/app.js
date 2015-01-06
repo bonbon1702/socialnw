@@ -8,6 +8,7 @@
             'magicsearch',
             'magiccard',
             'autocomplete',
-            'lazyloading'
+            'lazyloading',
+            'angular-loading-bar'
         ]);
 })(angular);
