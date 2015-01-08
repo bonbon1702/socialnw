@@ -6,5 +6,5 @@
  * Time: 10:31 AM
  */
 //user bind
-App::bind('Repositories\User\IUserRepository', 'Repositories\User\UserRepository');
-App::bind('Services\User\IUserService', 'Services\User\UserService');
+//App::bind('Repositories\User\IUserRepository', 'Repositories\User\UserRepository');
+//App::bind('Services\User\IUserService', 'Services\User\UserService');

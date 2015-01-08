@@ -2,18 +2,16 @@
 /**
  * Created by PhpStorm.
  * User: tuan
- * Date: 11/3/2014
- * Time: 9:46 AM
+ * Date: 1/8/2015
+ * Time: 10:29 AM
  */
 
-namespace Repositories\User;
+namespace Repositories;
 
-use Illuminate\Support\Facades\Auth;
-use Repositories\User\IUserRepository as IUserRepository;
-use \User;
 
-class UserRepository implements IUserRepository
-{
+use Core\BaseRepository;
+
+class TagPictureRepository implements BaseRepository{
     public function errors($code)
     {
         // TODO: Implement errors() method.
@@ -22,49 +20,26 @@ class UserRepository implements IUserRepository
     public function all(array $related = null)
     {
         // TODO: Implement all() method.
-        $users = User::all();
-
-        return $users;
     }
 
     public function get($id, array $related = null)
     {
         // TODO: Implement get() method.
-        $user = null;
-
-        if (!empty($id)) {
-            $user = User::find($id);
-        }
-
-        return $user;
     }
 
     public function getWhere($column, $value, array $related = null)
     {
-
+        // TODO: Implement getWhere() method.
     }
 
     public function getRecent(array $related = null)
     {
         // TODO: Implement getRecent() method.
-        $user = Auth::user();
-        return $user;
     }
 
     public function create(array $data)
     {
         // TODO: Implement create() method.
-        if (!empty($data)) {
-            $user = User::firstOrCreate(array(
-                'email' => $data['email'],
-                'username' => $data['username'],
-                'picture_profile' => $data['picture_profile'],
-                'gender' => $data['gender']
-            ));
-
-            Auth::login($user);
-        }
-        return true;
     }
 
     public function update(array $data)
@@ -81,4 +56,5 @@ class UserRepository implements IUserRepository
     {
         // TODO: Implement deleteWhere() method.
     }
+
 }

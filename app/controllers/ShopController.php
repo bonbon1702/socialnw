@@ -1,7 +1,7 @@
 <?php
 
-use Services\User\IUserService;
-use Repositories\User\IUserRepository;
+use Services\UserService;
+use Repositories\UserRepository;
 use Core\GoogleMapHelper;
 
 class ShopController extends BaseController
@@ -17,7 +17,7 @@ class ShopController extends BaseController
 
     private $googleMapHelper;
 
-    public function __construct(IUserRepository $userRepository, IUserService $userService, GoogleMapHelper $googleMapHelper)
+    public function __construct(UserRepository $userRepository, UserService $userService, GoogleMapHelper $googleMapHelper)
     {
         $this->userRepository = $userRepository;
         $this->userService = $userService;

@@ -6,8 +6,8 @@
  * Time: 10:23 AM
  */
 
-use Repositories\User\IUserRepository;
-use Services\User\IUserService;
+use Repositories\UserRepository;
+use Services\UserService;
 
 class UserController extends BaseController
 {
@@ -20,7 +20,7 @@ class UserController extends BaseController
      */
     private $userService;
 
-    public function __construct(IUserRepository $userRepository, IUserService $userService)
+    public function __construct(UserRepository $userRepository, UserService $userService)
     {
         $this->userRepository = $userRepository;
         $this->userService = $userService;

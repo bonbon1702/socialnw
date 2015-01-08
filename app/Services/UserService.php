@@ -6,18 +6,17 @@
  * Time: 10:00 AM
  */
 
-namespace Services\User;
+namespace Services;
 
-use Services\User\IUserService as IUserService;
-use Repositories\User\IUserRepository as IUserRepository;
-use Artdarek\OAuth\Facade\OAuth;
+use Core\BaseService;
+use Repositories\UserRepository;
 
-class UserService implements IUserService
+class UserService implements BaseService
 {
 
     private $userRepository;
 
-    function __construct(IUserRepository $userRepository)
+    function __construct(UserRepository $userRepository)
     {
         $this->userRepository = $userRepository;
     }
@@ -27,7 +26,6 @@ class UserService implements IUserService
     {
         // TODO: Implement create() method.
         if ($this->userRepository->create($data)) return true;
-        else return false;
     }
 
     public function update(array $data)

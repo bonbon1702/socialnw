@@ -1,7 +1,7 @@
 <?php
 
-use Services\User\IUserService;
-use Repositories\User\IUserRepository;
+use Services\UserService;
+use Repositories\UserRepository;
 
 class PostController extends \BaseController
 {
@@ -14,7 +14,7 @@ class PostController extends \BaseController
      */
     private $userService;
 
-    public function __construct(IUserRepository $userRepository, IUserService $userService)
+    public function __construct(UserService $userRepository, UserRepository $userService)
     {
         $this->userRepository = $userRepository;
         $this->userService = $userService;
