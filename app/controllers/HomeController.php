@@ -68,4 +68,8 @@ class HomeController extends BaseController
             'user' => $user
         ));
     }
+
+    public function uploadImage(){
+        dd(Input::all());
+    }
 }

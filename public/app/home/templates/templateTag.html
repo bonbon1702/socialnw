@@ -14,8 +14,8 @@
                     </span>
 
             <div class="magiccard-content bigEntrance">
-                <input type="hidden" value="{{ top }}"/>
-                <input type="hidden" value="{{ left }}"/>
+                <input type="hidden" value="{{ imgTop }}"/>
+                <input type="hidden" value="{{ imgLeft }}"/>
 
                 <div class="form-group">
                     <input type="text" ng-model="formData.name"/>
@@ -24,7 +24,7 @@
                     <input type="text" ng-model="formData.price"/>
                 </div>
                 <div class="form-group">
-                    <autocomplete ng-model="yourchoice" data="data" on-type="updateMovies" attr-placeholder="address..."></autocomplete>
+                    <autocomplete ng-model="formData.yourchoice" data="data" on-type="updateMovies" attr-placeholder="address..."></autocomplete>
                 </div>
                 <div class="form-group text-right">
                     <button type="submit" class="btn btn-primary">Submit</button>

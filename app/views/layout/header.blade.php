@@ -5,6 +5,11 @@
 				<a class="navbar-brand" href="#">Social Network</a>
 			</div>
 			<ul class="nav navbar-nav navbar-right">
+				<li>
+					{{ Form::open(array('url' => '/uploadImage', 'files' => true)) }}
+						<input type="file" name="image" onchange="this.form.submit()" style="padding-top: 12px"/>
+					{{ Form::close() }}
+				</li>
 			    <li><a href="#"><i class="glyphicon glyphicon-lock"></i> Home</a></li>
 			    @if ($user)
 			        <li><img src="{{ $user->picture_profile }}"></li>

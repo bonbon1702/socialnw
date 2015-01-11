@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="http://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>
+    <link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet" media="screen">
 
     <title>Home Page</title>
     <!-- Bootstrap -->
@@ -40,6 +41,7 @@
     {{ HTML::script('assets/js/autocomplete.js') }}
     {{ HTML::script('assets/js/lazyloading_v2.js') }}
     {{ HTML::script('assets/js/libs/loading-bar.min.js') }}
+    {{ HTML::script('assets/js/libs/caman.full.min.js') }}
 
 
     <!-- load angularjs file -->
