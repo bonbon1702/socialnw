@@ -35,12 +35,16 @@
             zoomControl: false,
             scaleControl: false,
             streetViewControl: false,
-            //scrollwheel: false,
+            scrollwheel: false,
             mapTypeId: google.maps.MapTypeId.ROADMAP,
-            styles: myStyles
+            styles: myStyles,
+            disableDefaultUI: true,
+            disableDoubleClickZoom: true
         }
 
         map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        //map.setOptions({draggable: true, zoomControl: false, scrollwheel: false, disableDoubleClickZoom: true});
+
         searchBox();
         homeButton();
     }

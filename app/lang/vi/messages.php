@@ -7,4 +7,5 @@
  */
 return array(
     'welcome' => 'Xin chào'
+
 );
