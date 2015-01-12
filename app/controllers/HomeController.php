@@ -70,6 +70,9 @@ class HomeController extends BaseController
     }
 
     public function uploadImage(){
-        dd(Input::all());
+        $image = Input::file('image');
+
+        $image_name = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME );
+        Cloudy::upload($image->getRealPath(), $image->getClientOriginalName());
     }
 }

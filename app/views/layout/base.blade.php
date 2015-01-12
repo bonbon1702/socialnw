@@ -17,6 +17,7 @@
     {{ HTML::style('assets/css/magiccard.css') }}
     {{ HTML::style('assets/css/libs/animations.css') }}
     {{ HTML::style('assets/css/libs/loading-bar.min.css') }}
+    {{ HTML::style('assets/css/css_1.css') }}
 </head>
 <body>
     {{--Header--}}
