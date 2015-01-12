@@ -8,7 +8,7 @@
     captionController.$inject = ['$scope'];
 
     function captionController($scope) {
-        $scope.image = 'http://dwaynepreed.files.wordpress.com/2014/10/beautiful-girl-3.jpg';
+        $scope.image = 'assets/images/test.jpg';
         $scope.points = [];
         $scope.callback = function (point) {
             var number = $scope.points.length + 1;
@@ -17,7 +17,8 @@
                 top: point.top,
                 left: point.left,
                 name: point.info.name,
-                price: point.info.price
+                price: point.info.price,
+                address: point.info.yourchoice
             }
             $scope.points.push(po);
             var point = angular.element(

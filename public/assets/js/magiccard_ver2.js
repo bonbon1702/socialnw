@@ -23,10 +23,12 @@ app.directive('magiccard', function () {
                 if (scope.onTyping == false) {
                     var position = scope.findPos(e, element[0]);
                     var positionDialog = {
-                        top: position.PosY + 50,
-                        left: position.PosX - 40
+                        top: position.PosY -20,
+                        left: position.PosX -40,
+                        imgTop: position.ImgPosY,
+                        imgLeft: position.ImgPosX
                     }
-                    scope.setPos(positionDialog.top, positionDialog.left);
+                    scope.setPos(positionDialog.top, positionDialog.left, positionDialog.imgTop,positionDialog.imgLeft);
                 }
             });
 
@@ -57,6 +59,8 @@ app.directive('magiccard', function () {
             $scope.show = false;
             $scope.formData = {};
             $scope.cursor = "auto";
+            $scope.imgTop = null;
+            $scope.imgLeft = null;
 
             $scope.tagSwitch = function () {
                 if ($scope.onTag == false) {
@@ -100,21 +104,24 @@ app.directive('magiccard', function () {
                     PosY = e.clientY + document.body.scrollTop
                     + document.documentElement.scrollTop;
                 }
-                PosX = PosX - ImgPos[0];
-                PosY = PosY - ImgPos[1];
+                //PosX = PosX - ImgPos[0];
+                //PosY = PosY - ImgPos[1];
                 position = {
                     PosX: PosX,
-                    PosY: PosY
+                    PosY: PosY,
+                    ImgPosX: PosX - ImgPos[0],
+                    ImgPosY: PosY - ImgPos[1]
                 };
-
                 return position;
             }
 
             $scope.findPos = this.findPos;
 
-            $scope.setPos = function (top, left) {
+            $scope.setPos = function (top, left, imgTop, imgLeft) {
                 $scope.top = top;
                 $scope.left = left;
+                $scope.imgTop = imgTop;
+                $scope.imgLeft = imgLeft;
                 $scope.show = true;
                 $scope.formData = "";
                 if ($scope.completing == true) {

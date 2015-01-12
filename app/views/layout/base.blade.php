@@ -9,11 +9,6 @@
     <title>Home Page</title>
     <!-- Bootstrap -->
     {{ HTML::style('assets/css/dist/css/bootstrap.min.css') }}
-    {{ HTML::style('assets/css/dist/css/font-awesome.min.css') }}
-    {{ HTML::style('assets/css/dist/css/picto.css') }}
-    {{ HTML::style('assets/css/dist/css/glyphicons_regular.css') }}
-    {{ HTML::style('assets/css/dist/css/glyphicons_filetypes.css') }}
-    {{ HTML::style('assets/css/dist/css/glyphicons_social.css') }}
     {{ HTML::style('assets/css/css.css') }}
     {{ HTML::style('assets/css/libs/ngDialog.min.css') }}
     {{ HTML::style('assets/css/libs/ngDialog-theme-plain.min.css') }}
@@ -21,9 +16,10 @@
     {{ HTML::style('assets/css/magiccard.css') }}
     {{ HTML::style('assets/css/libs/animations.css') }}
     {{ HTML::style('assets/css/libs/loading-bar.min.css') }}
-
 </head>
 <body>
+    {{--Header--}}
+    @include('layout.header')
 
     {{--Body--}}
     @yield('body')
@@ -44,7 +40,6 @@
     {{ HTML::script('assets/js/autocomplete.js') }}
     {{ HTML::script('assets/js/lazyloading_v2.js') }}
     {{ HTML::script('assets/js/libs/loading-bar.min.js') }}
-    {{ HTML::script('assets/js/libs/coreinit.js') }}
 
 
     <!-- load angularjs file -->

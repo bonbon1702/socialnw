@@ -124,7 +124,8 @@ return array(
         'Barryvdh\Debugbar\ServiceProvider',
         'Artdarek\OAuth\OAuthServiceProvider',
         'Toin0u\Geotools\GeotoolsServiceProvider',
-        'Way\Generators\GeneratorsServiceProvider'
+        'Way\Generators\GeneratorsServiceProvider',
+		'Teepluss\Cloudinary\CloudinaryServiceProvider'
 	),
 
 	/*
@@ -194,6 +195,7 @@ return array(
         'Debugbar'        => 'Barryvdh\Debugbar\Facade',
         'OAuth'           => 'Artdarek\OAuth\Facade\OAuth',
         'Geotools'        => 'Toin0u\Geotools\GeotoolsFacade',
+		'Cloudy' 	      => 'Teepluss\Cloudinary\Facades\Cloudy'
 	),
 
 );

@@ -32,6 +32,8 @@ Route::group(array('prefix' => 'connect'), function()
     Route::get('/twitter', 'UserController@loginWithTwitter');
 });
 
+Route::post('/uploadImage', 'HomeController@uploadImage');
+
 App::missing(function($exception) {
     return Redirect::to('/');
 });
