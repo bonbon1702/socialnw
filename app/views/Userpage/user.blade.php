@@ -4,10 +4,6 @@
 <div ng-controller="userController">
     <!-- Content START -->
     		<div id="content">
-
-
-
-    			<!-- <div class="layout-app">  -->
     			<div class="innerAll">
     	<div class="row" style="margin-left: 17px;margin-right: 15px;">
     		<div class="col-lg-9 col-md-8">

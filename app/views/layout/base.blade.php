@@ -34,6 +34,7 @@
     {{ HTML::style('assets/css/libs/jquery.gritter.css') }}
     {{ HTML::style('assets/css/libs/jquery.notyfy.css') }}
     {{ HTML::style('assets/css/libs/notyfy.theme.default.css') }}
+    {{ HTML::style('assets/css/libs/prettyPhoto.css') }}
 </head>
 <body>
 
@@ -76,6 +77,8 @@
     {{ HTML::script('assets/js/libs/jquery.blueimp-gallery.min.js') }}
     {{ HTML::script('assets/js/libs/jquery.gritter.min.js') }}
     {{ HTML::script('assets/js/libs/jquery.notyfy.js') }}
+    {{ HTML::script('assets/js/libs/jquery.prettyPhoto.js') }}
+    {{ HTML::script('assets/js/libs/modernizr.js') }}
 
 
     <!-- load angularjs file -->
