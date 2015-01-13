@@ -5,11 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="http://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>
-    <link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet" media="screen">
 
     <title>Home Page</title>
     <!-- Bootstrap -->
     {{ HTML::style('assets/css/dist/css/bootstrap.min.css') }}
+    {{ HTML::style('assets/css/dist/css/font-awesome.min.css') }}
+    {{ HTML::style('assets/css/dist/css/glyphicons_filetypes.css') }}
+    {{ HTML::style('assets/css/dist/css/glyphicons_regular.css') }}
+    {{ HTML::style('assets/css/dist/css/glyphicons_social.css') }}
+    {{ HTML::style('assets/css/dist/css/picto.css') }}
     {{ HTML::style('assets/css/css.css') }}
     {{ HTML::style('assets/css/libs/ngDialog.min.css') }}
     {{ HTML::style('assets/css/libs/ngDialog-theme-plain.min.css') }}
@@ -17,9 +21,9 @@
     {{ HTML::style('assets/css/magiccard.css') }}
     {{ HTML::style('assets/css/libs/animations.css') }}
     {{ HTML::style('assets/css/libs/loading-bar.min.css') }}
-    {{ HTML::style('assets/css/css_1.css') }}
 </head>
 <body>
+
     {{--Header--}}
     @include('layout.header')
 
@@ -35,6 +39,7 @@
     {{ HTML::script('assets/css/dist/js/bootstrap.min.js') }}
     {{ HTML::script('assets/js/libs/ngDialog.min.js') }}
     {{ HTML::script('assets/js/googleMap.js') }}
+    {{ HTML::script('assets/js/core.init.js') }}
     {{ HTML::script('assets/js/magicSearch.js') }}
     {{ HTML::script('assets/js/magiccard_ver2.js') }}
     {{ HTML::script('assets/js/libs/accounting.min.js') }}
@@ -42,7 +47,6 @@
     {{ HTML::script('assets/js/autocomplete.js') }}
     {{ HTML::script('assets/js/lazyloading_v2.js') }}
     {{ HTML::script('assets/js/libs/loading-bar.min.js') }}
-    {{ HTML::script('assets/js/libs/caman.full.min.js') }}
 
 
     <!-- load angularjs file -->

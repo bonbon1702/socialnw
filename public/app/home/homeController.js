@@ -8,7 +8,7 @@
     homeController.$inject = ['$scope', 'ngDialog'];
 
     function homeController($scope, ngDialog) {
-        //googleMap.init();
+        googleMap.init();
         //$scope.movies = [
         //    {
         //        'name' : "Lord of the Rings",
