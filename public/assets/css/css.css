@@ -50,10 +50,10 @@
     font-weight: 300;
 }
 
-/*h2 {*/
-    /*margin-bottom:0;*/
-    /*margin-top: 0;*/
-/*}*/
+h2 {
+    margin-bottom:0;
+    margin-top: 0;
+}
 
 img{
     background:#FFF url('../img/ajax.gif') no-repeat center center;
@@ -82,7 +82,7 @@ img{
     overflow: hidden;
 }
 
-.list-group-1>li a{font-size:14px;font-weight:bold;color:##fff;display:block;padding:10px 15px}
+.list-group-1>li a{font-size:14px;font-weight:bold;color:#fff;display:block;padding:10px 15px}
 .blc-row {
     display: inline;
     float: left;
@@ -241,7 +241,7 @@ a {
 a {
     background: transparent;
 }
-Inherited from li.ProfileNav-item.ProfileNav-item--following.is-active
+li.ProfileNav-item.ProfileNav-item--following.is-active
 .ProfileNav-item.is-active, .ProfileNav-item.is-active:hover {
     border-color: #66757f;
     color: #66757f;
@@ -250,17 +250,17 @@ Inherited from li.ProfileNav-item.ProfileNav-item--following.is-active
 li {
     text-align: inherit;
 }
-user agent stylesheetli {
+li {
     display: list-item;
     text-align: -webkit-match-parent;
 }
-Inherited from ul.ProfileNav-list
+ul.ProfileNav-list
 ol, ul {
     margin: 0;
     list-style: none;
     padding: 0;
 }
-user agent stylesheetul, menu, dir {
+ menu, dir {
     display: block;
     list-style-type: disc;
     -webkit-margin-before: 1em;
@@ -269,7 +269,7 @@ user agent stylesheetul, menu, dir {
     -webkit-margin-end: 0px;
     -webkit-padding-start: 40px;
 }
-Inherited from div.Grid-cell.u-size2of3.u-lg-size3of4
+div.Grid-cell.u-size2of3.u-lg-size3of4
 .Grid-cell {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -281,7 +281,7 @@ Inherited from div.Grid-cell.u-size2of3.u-lg-size3of4
     vertical-align: top;
     width: 100%;
 }
-Inherited from div.Grid.Grid--withGutter
+div.Grid.Grid--withGutter
 .Grid {
     display: block;
     font-size: 0;
@@ -289,7 +289,7 @@ Inherited from div.Grid.Grid--withGutter
     padding: 0;
     text-align: left;
 }
-Inherited from body.three-col.logged-in.user-style-Namndse02613.ms-windows.enhanced-mini-profile.ProfilePage.supports-drag-and-drop
+body.three-col.logged-in.user-style-Namndse02613.ms-windows.enhanced-mini-profile.ProfilePage.supports-drag-and-drop
 body.ms-windows {
     font-family: Arial,sans-serif;
 }
