@@ -6,4 +6,8 @@ class TagContent extends \Eloquent {
 	public $timestamps = true;
 
 	protected $table = 'tag_content';
+
+	public function tagLinkContent(){
+		return $this->hasMany('TagLinkContent');
+	}
 }

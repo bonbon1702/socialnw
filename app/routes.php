@@ -15,6 +15,8 @@ Route::get('/', 'HomeController@showHome');
 
 Route::get('/editor','HomeController@editor');
 
+Route::post('/editor','HomeController@editor');
+
 Route::get('/caption', 'HomeController@caption');
 
 Route::get('/post/{id}','PostController@show');
@@ -31,8 +33,6 @@ Route::group(array('prefix' => 'connect'), function()
 
     Route::get('/twitter', 'UserController@loginWithTwitter');
 });
-
-Route::post('/uploadImage', 'HomeController@uploadImage');
 
 App::missing(function($exception) {
     return Redirect::to('/');

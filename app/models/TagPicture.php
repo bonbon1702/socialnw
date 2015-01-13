@@ -6,4 +6,8 @@ class TagPicture extends \Eloquent {
 	public $timestamps = true;
 
 	protected $table = 'tag_picture';
+
+	public function post(){
+		return $this->belongsTo('Post','post_id');
+	}
 }

@@ -54,6 +54,13 @@ class HomeController extends BaseController
     public function editor()
     {
         $user = $this->userRepository->getRecent();
+        $image = Input::file('image');
+
+        if ($image && $user){
+            $user_name = $user->username;
+            $image_name = $user_name .'_'.pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME );
+            Cloudy::upload($image->getRealPath(), $image_name);
+        }
 
         return View::make('Homepage.editor', array(
             'user' => $user
@@ -67,12 +74,5 @@ class HomeController extends BaseController
         return View::make('Homepage.caption', array(
             'user' => $user
         ));
-    }
-
-    public function uploadImage(){
-        $image = Input::file('image');
-
-        $image_name = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME );
-        Cloudy::upload($image->getRealPath(), $image->getClientOriginalName());
     }
 }

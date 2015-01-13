@@ -6,4 +6,8 @@ class Shop extends \Eloquent {
 	public $timestamps = true;
 
 	protected $table = 'shop';
+
+	public function shopPost(){
+		return $this->hasMany('ShopPost');
+	}
 }
