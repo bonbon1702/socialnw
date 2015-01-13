@@ -9,6 +9,11 @@
     <title>Home Page</title>
     <!-- Bootstrap -->
     {{ HTML::style('assets/css/dist/css/bootstrap.min.css') }}
+    {{ HTML::style('assets/css/dist/css/font-awesome.min.css') }}
+    {{ HTML::style('assets/css/dist/css/glyphicons_filetypes.css') }}
+    {{ HTML::style('assets/css/dist/css/glyphicons_regular.css') }}
+    {{ HTML::style('assets/css/dist/css/glyphicons_social.css') }}
+    {{ HTML::style('assets/css/dist/css/picto.css') }}
     {{ HTML::style('assets/css/css.css') }}
     {{ HTML::style('assets/css/libs/ngDialog.min.css') }}
     {{ HTML::style('assets/css/libs/ngDialog-theme-plain.min.css') }}
@@ -18,6 +23,7 @@
     {{ HTML::style('assets/css/libs/loading-bar.min.css') }}
 </head>
 <body>
+
     {{--Header--}}
     @include('layout.header')
 
@@ -33,6 +39,7 @@
     {{ HTML::script('assets/css/dist/js/bootstrap.min.js') }}
     {{ HTML::script('assets/js/libs/ngDialog.min.js') }}
     {{ HTML::script('assets/js/googleMap.js') }}
+    {{ HTML::script('assets/js/core.init.js') }}
     {{ HTML::script('assets/js/magicSearch.js') }}
     {{ HTML::script('assets/js/magiccard_ver2.js') }}
     {{ HTML::script('assets/js/libs/accounting.min.js') }}
