@@ -25,9 +25,9 @@
 
 	    <div class="navbar hidden-print navbar-default box main" role="navigation">
         	<div class=" pull-left">
-        	  	<a class="btn bt-sm glyphicon glyphicon-home" style="top: 9px;font-size: 1.5em;color: #ccc;" href="home.html?lang=en">
-        	  		<i class"glyphicon glyphicon-home"></i>
-        	  	</a>
+                <a class="btn bt-sm glyphicon glyphicon-home" style="top: 9px;font-size: 1.5em;color: #ccc;" href="home.html?lang=en">
+                    <i class"glyphicon glyphicon-home"></i>
+                </a>
         	</div>
         	<ul class="notifications pull-left hidden-xs">
         		<li class="dropdown notif">
