@@ -6,4 +6,20 @@ class Post extends \Eloquent {
 	public $timestamps = true;
 
 	protected $table = 'post';
+
+	public function album(){
+		return $this->hasMany('Album');
+	}
+
+	public function shopPost(){
+		return $this->hasMany('ShopPost');
+	}
+
+	public function tag(){
+		return $this->hasMany('Tag');
+	}
+
+	public function tagPicture(){
+		return $this->hasMany('TagPicture');
+	}
 }

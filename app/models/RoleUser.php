@@ -6,4 +6,8 @@ class RoleUser extends \Eloquent {
 	public $timestamps = true;
 
 	protected $table = 'role_user';
+
+	public function users(){
+		return $this->hasMany('User');
+	}
 }

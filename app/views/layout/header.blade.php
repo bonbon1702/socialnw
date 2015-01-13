@@ -6,7 +6,7 @@
 			</div>
 			<ul class="nav navbar-nav navbar-right">
 				<li>
-					{{ Form::open(array('url' => '/uploadImage', 'files' => true)) }}
+					{{ Form::open(array('url' => '/editor', 'files' => true)) }}
 						<input type="file" name="image" onchange="this.form.submit()" style="padding-top: 12px"/>
 					{{ Form::close() }}
 				</li>

@@ -25,4 +25,20 @@ class User extends \Eloquent implements UserInterface, RemindableInterface{
     public $timestamps = true;
 
     protected $guarded = array();
+
+	public function role(){
+		return $this->belongsTo('RoleUser','role_id');
+	}
+
+	public function album(){
+		return $this->hasMany('Album');
+	}
+
+	public function comments(){
+		return $this->hasMany('Comment');
+	}
+
+	public function follow(){
+		return $this->hasMany('Follow');
+	}
 }

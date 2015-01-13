@@ -6,4 +6,12 @@ class Tag extends \Eloquent {
 	public $timestamps = true;
 
 	protected $table = 'tag';
+
+	public function post(){
+		return $this->belongsTo('Post','post_id');
+	}
+
+	public function tagLinkContent(){
+		return $this->hasMany('TagLinkContent');
+	}
 }
