@@ -2,7 +2,6 @@
 
 @section('body')
 <div ng-controller="homeController">
-	{{--<input id="pac-input" class="controls" type="text" placeholder="Search Box" />--}}
     {{--<div style="width: 200px;height: 100px">--}}
         {{--<magicsearch ng-model="yourchoice" data="movies" on-type="updateMovies"></magicsearch>--}}
     {{--</div>--}}
@@ -16,7 +15,7 @@
     {{--</div>--}}
     <!-- Content START -->
     		<div id="content">
-
+				<input id="pac-input" class="controls" type="text" placeholder="Search Box" />
     	<div class="innerAll">
     		<div class="row" style="margin-left: 17px;margin-right: 23px;">
     			<div class="timeline-cover">
