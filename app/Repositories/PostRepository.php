@@ -10,6 +10,8 @@ namespace Repositories;
 
 
 use Core\BaseRepository;
+use Illuminate\Support\Facades\Auth;
+use \Post;
 
 class PostRepository implements BaseRepository{
     public function errors($code)
@@ -20,16 +22,24 @@ class PostRepository implements BaseRepository{
     public function all(array $related = null)
     {
         // TODO: Implement all() method.
+        $posts = Post::all();
+        return $posts;
     }
 
     public function get($id, array $related = null)
     {
         // TODO: Implement get() method.
+        $post = Post::find($id);
+
+        return $post;
     }
 
     public function getWhere($column, $value, array $related = null)
     {
         // TODO: Implement getWhere() method.
+        $post = Post::where($column,$value);
+
+        return $post;
     }
 
     public function getRecent(array $related = null)
@@ -40,6 +50,11 @@ class PostRepository implements BaseRepository{
     public function create(array $data)
     {
         // TODO: Implement create() method.
+        if (!empty($data)){
+            $post = Post::create(array(
+                'user_id'
+            ));
+        }
     }
 
     public function update(array $data)
