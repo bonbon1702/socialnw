@@ -17,11 +17,12 @@ class HomeController extends BaseController
 
     private $googleMapHelper;
 
-    public function __construct(UserRepository $userRepository, UserService $userService, GoogleMapHelper $googleMapHelper)
+    public function __construct(UserRepository $userRepository, UserService $userService, GoogleMapHelper $googleMapHelper,\Services\PostService $postService)
     {
         $this->userRepository = $userRepository;
         $this->userService = $userService;
         $this->googleMapHelper = $googleMapHelper;
+        $this->postService = $postService;
     }
 
     /*
@@ -45,7 +46,8 @@ class HomeController extends BaseController
     public function showHome()
     {
         $user = $this->userRepository->getRecent();
-
+        $data = array();
+        $this->postService->create($data);
         return View::make('Homepage.home', array(
             'user' => $user
         ));

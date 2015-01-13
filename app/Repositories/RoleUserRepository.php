@@ -12,7 +12,8 @@ namespace Repositories;
 use Core\BaseRepository;
 use \RoleUser;
 
-class RoleUserRepository implements BaseRepository{
+class RoleUserRepository implements BaseRepository
+{
 
     public function errors($code)
     {
@@ -30,11 +31,7 @@ class RoleUserRepository implements BaseRepository{
     public function get($id, array $related = null)
     {
         // TODO: Implement get() method.
-        $role_user = null;
-
-        if (!$id){
-            $role_user = RoleUser::find($id);
-        }
+        $role_user = RoleUser::find($id);
 
         return $role_user;
     }
@@ -52,7 +49,7 @@ class RoleUserRepository implements BaseRepository{
     public function create(array $data)
     {
         // TODO: Implement create() method.
-        if (!empty($data)){
+        if (!empty($data)) {
             $user_role = new RoleUser;
             $user_role->roll_name = $data['roll_name'];
             $user_role->save();
@@ -64,7 +61,7 @@ class RoleUserRepository implements BaseRepository{
     public function update(array $data)
     {
         // TODO: Implement update() method.
-        if (!empty($data)){
+        if (!empty($data)) {
             RoleUser::where('id', $data['id'])
                 ->update(array(
                     'role_name' => $data['role_name']
@@ -83,8 +80,8 @@ class RoleUserRepository implements BaseRepository{
     public function deleteWhere($column, $value)
     {
         // TODO: Implement deleteWhere() method.
-        if (!empty($column) && !empty($value)){
-            RoleUser::where($column,$value)->delete();
+        if (!empty($column) && !empty($value)) {
+            RoleUser::where($column, $value)->delete();
         }
     }
 
