@@ -8,9 +8,9 @@ app.directive('magiccard', function () {
         return {
             restrict: 'E',
             scope: {
-                src: '=src',
                 callback: '=callback',
-                data: '=data'
+                data: '=data',
+                src: '@src'
             },
             link: link,
             controller: controller,
@@ -23,12 +23,12 @@ app.directive('magiccard', function () {
                 if (scope.onTyping == false) {
                     var position = scope.findPos(e, element[0]);
                     var positionDialog = {
-                        top: position.PosY -20,
-                        left: position.PosX -40,
+                        top: position.PosY - 20,
+                        left: position.PosX - 40,
                         imgTop: position.ImgPosY,
                         imgLeft: position.ImgPosX
                     }
-                    scope.setPos(positionDialog.top, positionDialog.left, positionDialog.imgTop,positionDialog.imgLeft);
+                    scope.setPos(positionDialog.top, positionDialog.left, positionDialog.imgTop, positionDialog.imgLeft);
                 }
             });
 
@@ -169,18 +169,19 @@ app.directive('hovercard', function () {
                 </div>\
         </div></div>'
     }
-    function link(scope, element, attrs){
+    function link(scope, element, attrs) {
 
     }
-    function controller($scope, $http){
-        $scope.show = false;
-        $scope.points =[];
 
-        for (var i=0; i< $scope.data.length;i++){
-            var point ={
+    function controller($scope, $http) {
+        $scope.show = false;
+        $scope.points = [];
+
+        for (var i = 0; i < $scope.data.length; i++) {
+            var point = {
                 name: $scope.data[i].name,
                 price: accounting.formatNumber($scope.data[i].price),
-                top: parseInt($scope.data[i].top) +31,
+                top: parseInt($scope.data[i].top) + 31,
                 left: parseInt($scope.data[i].left)
             }
             $scope.points.push(point);

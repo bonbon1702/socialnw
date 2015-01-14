@@ -13,11 +13,11 @@
 
 Route::get('/', 'HomeController@showHome');
 
-Route::get('/editor','HomeController@editor');
+Route::get('/editor','PostController@editor');
 
-Route::post('/editor','HomeController@editor');
+Route::post('/editor','PostController@editor');
 
-Route::get('/caption', 'HomeController@caption');
+Route::get('/caption/{name}', 'PostController@caption');
 
 Route::get('/post/{id}','PostController@show');
 
@@ -32,6 +32,18 @@ Route::group(array('prefix' => 'connect'), function()
     Route::get('/google', 'UserController@loginWithGoogle');
 
     Route::get('/twitter', 'UserController@loginWithTwitter');
+});
+
+Route::group(array('prefix' => 'api'), function() {
+
+    // since we will be using this just for CRUD, we won't need create and edit
+    // Angular will handle both of those forms
+    // this ensures that a user can't access api/create or api/edit when there's nothing there
+    Route::resource('post', 'PostController',
+        array('only' => array('index', 'store', 'destroy')));
+    Route::resource('upload', 'UploadController',
+        array('only' => array('store')));
+
 });
 
 App::missing(function($exception) {

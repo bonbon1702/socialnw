@@ -46,35 +46,10 @@ class HomeController extends BaseController
     public function showHome()
     {
         $user = $this->userRepository->getRecent();
-        $data = array();
-        $this->postService->create($data);
+
         return View::make('Homepage.home', array(
             'user' => $user
         ));
     }
 
-    public function editor()
-    {
-        $user = $this->userRepository->getRecent();
-        $image = Input::file('image');
-
-        if ($image && $user){
-            $user_name = $user->username;
-            $image_name = $user_name .'_'.pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME );
-            Cloudy::upload($image->getRealPath(), $image_name);
-        }
-
-        return View::make('Homepage.editor', array(
-            'user' => $user
-        ));
-    }
-
-    public function caption()
-    {
-        $user = $this->userRepository->getRecent();
-
-        return View::make('Homepage.caption', array(
-            'user' => $user
-        ));
-    }
 }

@@ -8,8 +8,9 @@
     captionController.$inject = ['$scope'];
 
     function captionController($scope) {
-        $scope.image = 'assets/images/test.jpg';
+        //$scope.image = '../assets/images/resize_tuannghia1702_4239334_maxmotel_masha_sedgwick_02_outfit2_0233.jpg';
         $scope.points = [];
+        $scope.caption = null;
         $scope.callback = function (point) {
             var number = $scope.points.length + 1;
             var po = {
@@ -69,5 +70,10 @@
                 'name' : "Oldboy",
                 'address' : '11 Oldboy'
             }];
+
+        $scope.submit = function(){
+
+        }
+
     }
 })(angular);

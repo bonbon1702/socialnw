@@ -5,19 +5,19 @@
         <div class="process">
             <div class="process-row">
                 <div class="process-step">
-                    <button type="button" class="btn btn-success btn-circle" disabled="disabled"><i
+                    <button type="button" class="btn btn-success btn-circle-post" disabled="disabled"><i
                                 class="fa fa-user fa-3x"></i></button>
                     <p>Editor picture</p>
                 </div>
                 <div class="process-step">
-                    <button type="button" class="btn btn-default btn-circle" disabled="disabled"><i
+                    <button type="button" class="btn btn-default btn-circle-post" disabled="disabled"><i
                                 class="fa fa-comments-o fa-3x"></i></button>
                     <p>Caption</p>
                 </div>
             </div>
         </div>
         <div id="photo">
-            <canvas id="photoCanvas" width="500" height="500"></canvas>
+            <img id="photoCanvas" src="{{ $upload->image_url }}" name="{{ $upload->name }}" style="width: 500px" data-href="{{ URL::to('caption',$upload->name) }}">
         </div>
         <div>
             <button ng-click="editor('vintage')">Vintage</button>

@@ -21,6 +21,8 @@
     {{ HTML::style('assets/css/magiccard.css') }}
     {{ HTML::style('assets/css/libs/animations.css') }}
     {{ HTML::style('assets/css/libs/loading-bar.min.css') }}
+    {{ HTML::style('assets/css/css_1.css') }}
+    {{ HTML::style('assets/css/css_2.css') }}
 </head>
 <body>
 
@@ -47,7 +49,7 @@
     {{ HTML::script('assets/js/autocomplete.js') }}
     {{ HTML::script('assets/js/lazyloading_v2.js') }}
     {{ HTML::script('assets/js/libs/loading-bar.min.js') }}
-
+    {{ HTML::script('assets/js/libs/caman.full.min.js') }}
 
     <!-- load angularjs file -->
     {{ HTML::script('app/app.js') }} <!-- load our application -->

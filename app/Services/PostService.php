@@ -24,7 +24,7 @@ class PostService implements BaseService{
     public function create(array $data)
     {
         // TODO: Implement create() method.
-        $this->postRepository->create($data);
+
     }
 
     public function update(array $data)

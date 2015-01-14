@@ -73,6 +73,9 @@
         				<li><a href="about.html?lang=en" >About</a></li>
         				<li><a href="user.html">Profile</a></li>
         				<li><a href="login.html?lang=en">Logout</a></li>
+						<li><a href="{{  URL::to('connect/facebook') }}"><p>Sign in with Facebook</p></a></li>
+						<li><a href="{{  URL::to('connect/google') }}"><p>Sign in with Google</p></a></li>
+						<li><a href="{{  URL::to('connect/twitter') }}"><p>Sign in with Twitter</p></a></li>
         		    </ul>
         		</div>
         	</div>
@@ -80,5 +83,8 @@
         	  	<span class="input-group-addon"><i class="icon-search"></i></span>
         	  	<input type="text" class="form-control" placeholder="Search a friend"/>
         	</div>
+			{{ Form::open(array('url' => '/editor', 'files' => true)) }}
+			<input type="file" name="image" onchange="this.form.submit()" style="padding-top: 12px"/>
+			{{ Form::close() }}
         </div>
 </header>

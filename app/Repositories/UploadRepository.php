@@ -2,16 +2,17 @@
 /**
  * Created by PhpStorm.
  * User: tuan
- * Date: 1/8/2015
- * Time: 10:28 AM
+ * Date: 1/13/2015
+ * Time: 10:25 PM
  */
 
 namespace Repositories;
 
 
 use Core\BaseRepository;
+use \Upload;
 
-class TagLinkContentRepository implements BaseRepository{
+class UploadRepository implements BaseRepository{
     public function errors($code)
     {
         // TODO: Implement errors() method.
@@ -25,11 +26,17 @@ class TagLinkContentRepository implements BaseRepository{
     public function get($id, array $related = null)
     {
         // TODO: Implement get() method.
+        $upload = Upload::find($id);
+
+        return $upload;
     }
 
     public function getWhere($column, $value, array $related = null)
     {
         // TODO: Implement getWhere() method.
+        $upload = Upload::where($column,$value)->first();
+
+        return $upload;
     }
 
     public function getRecent(array $related = null)
@@ -40,11 +47,22 @@ class TagLinkContentRepository implements BaseRepository{
     public function create(array $data)
     {
         // TODO: Implement create() method.
+        if (!empty($data)){
+            $upload = Upload::create($data);
+        }
+
+        return $upload;
     }
 
     public function update($model, array $data)
     {
         // TODO: Implement update() method.
+        if (!empty($data)){
+            $model->update($data);
+
+            return true;
+        }
+        return false;
     }
 
     public function delete($id)

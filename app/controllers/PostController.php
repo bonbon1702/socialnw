@@ -2,6 +2,7 @@
 
 use Services\UserService;
 use Repositories\UserRepository;
+use Repositories\UploadRepository;
 
 class PostController extends \BaseController
 {
@@ -14,10 +15,13 @@ class PostController extends \BaseController
      */
     private $userService;
 
-    public function __construct(UserService $userRepository, UserRepository $userService)
+    private $uploadRepository;
+
+    public function __construct(UserRepository $userRepository, UserService $userService,UploadRepository $uploadRepository)
     {
         $this->userRepository = $userRepository;
         $this->userService = $userService;
+        $this->uploadRepository = $uploadRepository;
     }
 
     /**
@@ -104,6 +108,47 @@ class PostController extends \BaseController
     public function destroy($id)
     {
         //
+    }
+
+    public function editor()
+    {
+        $user = $this->userRepository->getRecent();
+
+//        if ($image && $user){
+//            $user_name = $user->username;
+//            $image_name = $user_name .'_'.pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME );
+//            Cloudy::upload($image->getRealPath(), $image_name);
+
+        $img = Input::file('image');
+
+        $image = Image::make($img);
+//        $image_name = strstr($user->email, '@', true) . '_' . $img->getClientOriginalName();
+        $image_name = \Core\Helper::get_rand_alphanumeric(8);
+        $image_url = 'assets/images/' .$image_name.'.jpg';
+
+        $image->save($image_url);
+
+        $upload = $this->uploadRepository->create(array(
+            'user_id' => $user->id,
+            'image_url' => $image_url,
+            'name' => $image_name
+        ));
+
+        return View::make('Homepage.editor', array(
+            'user' => $user,
+            'upload' => $upload
+        ));
+    }
+
+    public function caption($name)
+    {
+        $user = $this->userRepository->getRecent();
+        $upload = $this->uploadRepository->getWhere('name',$name);
+
+        return View::make('Homepage.caption', array(
+            'user' => $user,
+            'upload' => $upload
+        ));
     }
 
 }

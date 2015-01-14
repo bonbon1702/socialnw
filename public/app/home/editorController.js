@@ -5,10 +5,10 @@
     angular.module('MyApp')
         .controller('editorController', editorController);
 
-    editorController.$inject = ['$scope'];
+    editorController.$inject = ['$scope','editorService','$window'];
 
-    function editorController($scope){
-        Caman("#photoCanvas", "assets/images/test.jpg", function () {
+    function editorController($scope, editorService, $location){
+        Caman("#photoCanvas", function () {
             this.render();
         });
 
@@ -22,8 +22,20 @@
 
         $scope.submit = function() {
             Caman("#photoCanvas", function () {
+                var photo = angular.element(this.image);
                 var image = this.toBase64();
-                console.log(image)
+                var data = {
+                    img: image,
+                    name: photo.attr('name')
+                }
+                editorService.save(data)
+                    .success(function(data) {
+                        //document.location.href = photo.data('href');
+                        console.log(data);
+                    })
+                    .error(function(data) {
+                        console.log(data);
+                    });
             });
         }
     }

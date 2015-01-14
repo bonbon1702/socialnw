@@ -51,15 +51,19 @@ class PostRepository implements BaseRepository{
     {
         // TODO: Implement create() method.
         if (!empty($data)){
-            $post = Post::create(array(
-                'user_id'
-            ));
+            $post = Post::create($data);
         }
+
+        return $post;
     }
 
-    public function update(array $data)
+    public function update($model, array $data)
     {
         // TODO: Implement update() method.
+        if (!empty($data)){
+            $post = Post::update($data);
+        }
+        return $post;
     }
 
     public function delete($id)
@@ -70,6 +74,7 @@ class PostRepository implements BaseRepository{
     public function deleteWhere($column, $value)
     {
         // TODO: Implement deleteWhere() method.
+        $this->getWhere($column,$value)->delete();
     }
 
 }
