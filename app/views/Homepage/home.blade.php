@@ -143,7 +143,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="blc-row">
                             <div class="widget border-none bg-none widget-pinterest active">
                                 <div class="widget-body bg-none padding-none">
@@ -368,7 +367,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <div class="col-md-4 col-lg-3">
 
@@ -535,6 +533,7 @@
             <!-- // Footer END -->
 
 
+        </div>
         </div>
 @stop
 

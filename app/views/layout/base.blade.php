@@ -20,9 +20,21 @@
     {{ HTML::style('assets/css/autocomplete.css') }}
     {{ HTML::style('assets/css/magiccard.css') }}
     {{ HTML::style('assets/css/libs/animations.css') }}
+    {{ HTML::style('assets/css/libs/jquery-ui.min.css') }}
     {{ HTML::style('assets/css/libs/loading-bar.min.css') }}
-    {{ HTML::style('assets/css/css_1.css') }}
-    {{ HTML::style('assets/css/css_2.css') }}
+    {{ HTML::style('assets/css/libs/animate.min.css') }}
+    {{ HTML::style('assets/css/libs/jquery.easy-pie-chart.css') }}
+    {{ HTML::style('assets/css/libs/bootstrap-select.css') }}
+    {{ HTML::style('assets/css/libs/bootstrap-switch.css') }}
+    {{ HTML::style('assets/css/libs/fileupload.css') }}
+    {{ HTML::style('assets/css/libs/multi-select.css') }}
+    {{ HTML::style('assets/css/libs/dropzone.css') }}
+    {{ HTML::style('assets/css/libs/jquery.plupload.queue.css') }}
+    {{ HTML::style('assets/css/libs/blueimp-gallery.min.css') }}
+    {{ HTML::style('assets/css/libs/jquery.gritter.css') }}
+    {{ HTML::style('assets/css/libs/jquery.notyfy.css') }}
+    {{ HTML::style('assets/css/libs/notyfy.theme.default.css') }}
+    {{ HTML::style('assets/css/libs/prettyPhoto.css') }}
 </head>
 <body>
 
@@ -37,6 +49,7 @@
 
     <!-- load libs -->
     {{ HTML::script('assets/js/libs/jquery.js') }}
+    {{ HTML::script('assets/js/libs/jquery-ui.min.js') }}
    	{{ HTML::script('assets/js/libs/angular.js') }}
     {{ HTML::script('assets/css/dist/js/bootstrap.min.js') }}
     {{ HTML::script('assets/js/libs/ngDialog.min.js') }}
@@ -49,7 +62,24 @@
     {{ HTML::script('assets/js/autocomplete.js') }}
     {{ HTML::script('assets/js/lazyloading_v2.js') }}
     {{ HTML::script('assets/js/libs/loading-bar.min.js') }}
-    {{ HTML::script('assets/js/libs/caman.full.min.js') }}
+    {{ HTML::script('assets/js/libs/jquery.easypiechart.min.js') }}
+    {{ HTML::script('assets/js/libs/bootstrap-select.js') }}
+    {{ HTML::script('assets/js/libs/bootstrap-switch.js') }}
+    {{ HTML::script('assets/js/libs/bootstrap-fileupload.js') }}
+    {{ HTML::script('assets/js/libs/jquery.multi-select.js') }}
+    {{ HTML::script('assets/js/libs/dropzone.min.js') }}
+    {{ HTML::script('assets/js/libs/jquery.plupload.queue.js') }}
+    {{ HTML::script('assets/js/libs/blueimp-gallery.min.js') }}
+    {{ HTML::script('assets/js/libs/blueimp-gallery-fullscreen.js') }}
+    {{ HTML::script('assets/js/libs/blueimp-gallery-indicator.js') }}
+    {{ HTML::script('assets/js/libs/blueimp-gallery-video.js') }}
+    {{ HTML::script('assets/js/libs/blueimp-helper.js') }}
+    {{ HTML::script('assets/js/libs/jquery.blueimp-gallery.min.js') }}
+    {{ HTML::script('assets/js/libs/jquery.gritter.min.js') }}
+    {{ HTML::script('assets/js/libs/jquery.notyfy.js') }}
+    {{ HTML::script('assets/js/libs/jquery.prettyPhoto.js') }}
+    {{ HTML::script('assets/js/libs/modernizr.js') }}
+
 
     <!-- load angularjs file -->
     {{ HTML::script('app/app.js') }} <!-- load our application -->
