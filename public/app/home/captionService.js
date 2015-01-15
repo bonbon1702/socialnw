@@ -11,8 +11,15 @@
             save : function(data) {
                 return $http({
                     method: 'POST',
-                    url: 'api/post',
+                    url: '../api/post',
                     //headers: { 'Content-Type' : 'application/x-www-form-urlencoded' },
+                    data: data
+                });
+            },
+            update : function(data){
+                return $http({
+                    method: 'POST',
+                    url: '../api/shop',
                     data: data
                 });
             }

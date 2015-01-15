@@ -2,6 +2,7 @@
 
 use Services\UserService;
 use Repositories\UserRepository;
+use Repositories\ShopRepository;
 use Core\GoogleMapHelper;
 
 class ShopController extends BaseController
@@ -17,11 +18,14 @@ class ShopController extends BaseController
 
     private $googleMapHelper;
 
-    public function __construct(UserRepository $userRepository, UserService $userService, GoogleMapHelper $googleMapHelper)
+    private $shopRepository;
+
+    public function __construct(UserRepository $userRepository, UserService $userService, GoogleMapHelper $googleMapHelper, ShopRepository $shopRepository)
     {
         $this->userRepository = $userRepository;
         $this->userService = $userService;
         $this->googleMapHelper = $googleMapHelper;
+        $this->shopRepository = $shopRepository;
     }
 
     public function showShop($name)
@@ -30,6 +34,38 @@ class ShopController extends BaseController
 
         return View::make('Shoppage.shop', array(
             'user' => $user
+        ));
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     * GET /upload/create
+     *
+     * @return Response
+     */
+    public function create()
+    {
+        //
+        return Response::json(array(
+            'success' => true
+        ));
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     * POST /upload
+     *
+     * @return Response
+     */
+    public function store()
+    {
+        //
+        $data = Input::all();
+
+        $results = $this->shopRepository->search($data['type']);
+
+        return Response::json(array(
+            'data' => $results
         ));
     }
 }

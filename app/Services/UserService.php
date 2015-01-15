@@ -28,7 +28,7 @@ class UserService implements BaseService
         if ($this->userRepository->create($data)) return true;
     }
 
-    public function update(array $data)
+    public function update($model, array $data)
     {
         // TODO: Implement update() method.
     }

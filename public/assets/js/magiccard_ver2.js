@@ -10,7 +10,8 @@ app.directive('magiccard', function () {
             scope: {
                 callback: '=callback',
                 data: '=data',
-                src: '@src'
+                src: '@src',
+                update: '=update'
             },
             link: link,
             controller: controller,

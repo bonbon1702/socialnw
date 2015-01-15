@@ -46,7 +46,6 @@ class UploadController extends \BaseController {
 
 		$img = Image::make($data['img']);
 		$image_name = $data['name'];
-
 		$upload = $this->uploadRepository->getWhere('name',$image_name);
 		$image_name_editor = \Core\Helper::get_rand_alphanumeric(8);
 		$image_url = 'assets/images/' .$image_name_editor . '.jpg';
@@ -54,12 +53,12 @@ class UploadController extends \BaseController {
 		$img->save($image_url);
 
 		$this->uploadRepository->update($upload,array(
-			'image_editor_url' => $image_url
+			'image_url_editor' => $image_url
 		));
 
 
 		return Response::json(array(
-			'success' => $image_name
+			'success' => true
 		));
 	}
 

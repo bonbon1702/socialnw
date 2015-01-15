@@ -23,9 +23,12 @@ class TagPictureService implements BaseService{
     public function create(array $data)
     {
         // TODO: Implement create() method.
+        $tagPicture = $this->tagPictureRepository->create($data);
+
+        return true;
     }
 
-    public function update(array $data)
+    public function update($model, array $data)
     {
         // TODO: Implement update() method.
     }

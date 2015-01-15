@@ -10,4 +10,7 @@ class TagPicture extends \Eloquent {
 	public function post(){
 		return $this->belongsTo('Post','post_id');
 	}
+	public function shop(){
+		return $this->belongsTo('Shop','shop_id');
+	}
 }

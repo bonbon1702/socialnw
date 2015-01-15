@@ -7,7 +7,7 @@ class Shop extends \Eloquent {
 
 	protected $table = 'shop';
 
-	public function shopPost(){
-		return $this->hasMany('ShopPost');
+	public function tagPicture(){
+		return $this->hasMany('TagPicture');
 	}
 }

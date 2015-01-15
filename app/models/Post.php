@@ -11,10 +11,6 @@ class Post extends \Eloquent {
 		return $this->hasMany('Album');
 	}
 
-	public function shopPost(){
-		return $this->hasMany('ShopPost');
-	}
-
 	public function tag(){
 		return $this->hasMany('Tag');
 	}

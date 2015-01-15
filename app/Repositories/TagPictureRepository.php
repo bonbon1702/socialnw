@@ -10,6 +10,7 @@ namespace Repositories;
 
 
 use Core\BaseRepository;
+use \TagPicture;
 
 class TagPictureRepository implements BaseRepository{
     public function errors($code)
@@ -40,6 +41,11 @@ class TagPictureRepository implements BaseRepository{
     public function create(array $data)
     {
         // TODO: Implement create() method.
+        if (!empty($data)){
+            $tagPicture = TagPicture::create($data);
+        }
+
+        return $tagPicture;
     }
 
     public function update($model, array $data)

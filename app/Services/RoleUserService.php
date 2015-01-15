@@ -28,7 +28,7 @@ class RoleUserService implements BaseService
             return true;
     }
 
-    public function update(array $data)
+    public function update($model, array $data)
     {
         // TODO: Implement update() method.
         if ($this->roleUserRepository->update($data))

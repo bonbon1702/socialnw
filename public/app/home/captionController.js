@@ -5,10 +5,9 @@
     angular.module('MyApp')
         .controller('captionController', captionController);
 
-    captionController.$inject = ['$scope'];
+    captionController.$inject = ['$scope','captionService'];
 
-    function captionController($scope) {
-        //$scope.image = '../assets/images/resize_tuannghia1702_4239334_maxmotel_masha_sedgwick_02_outfit2_0233.jpg';
+    function captionController($scope, captionService) {
         $scope.points = [];
         $scope.caption = null;
         $scope.callback = function (point) {
@@ -48,31 +47,38 @@
             angular.element(document).find('.magiccard#' + number).remove();
 
         }
-        $scope.movies = [
-            {
-                'name' : "Lord of the Rings",
-                'address' : '32 Lac trung',
-                'link': 'facebook'
-            },
-            {
-                'name' : "Drive",
-                'address' : '25 drive'
-            },
-            {
-                'name' : "Science of Sleep",
-                'address' : '64 Science'
-            },
-            {
-                'name' : "Back to the Future",
-                'address' : '15 back'
-            },
-            {
-                'name' : "Oldboy",
-                'address' : '11 Oldboy'
-            }];
+        $scope.shop = [];
+        $scope.update = function(type){
+            var data = {
+                type: type
+            };
+            captionService.update(data)
+                .success(function(data){
+                    var data_shop = data.data;
+                    for (var i=0 ;i<data_shop.length ;i++){
+                        var shop = {
+                            name: data_shop[i].address
+                        }
+                        $scope.shop.push(shop);
+                    }
+                })
+                .error(function(data){
+                    console.log(data);
+                });
+        };
+        $scope.submit = function(id){
+            var data = {
+                caption: $scope.caption,
+                points: $scope.points,
+                uploadId: id
+            };
+            captionService.save(data)
+                .success(function(data){
 
-        $scope.submit = function(){
-
+                })
+                .error(function(data){
+                    console.log(data);
+                });
         }
 
     }

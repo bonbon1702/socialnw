@@ -43,6 +43,8 @@ Route::group(array('prefix' => 'api'), function() {
         array('only' => array('index', 'store', 'destroy')));
     Route::resource('upload', 'UploadController',
         array('only' => array('store')));
+    Route::resource('shop', 'ShopController',
+        array('only' => array('create', 'store')));
 
 });
 

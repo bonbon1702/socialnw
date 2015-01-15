@@ -2,6 +2,8 @@
 
 use Services\UserService;
 use Repositories\UserRepository;
+use Repositories\PostRepository;
+use Services\PostService;
 use Repositories\UploadRepository;
 
 class PostController extends \BaseController
@@ -15,13 +17,19 @@ class PostController extends \BaseController
      */
     private $userService;
 
+    private $postRepository;
+
+    private $postService;
+
     private $uploadRepository;
 
-    public function __construct(UserRepository $userRepository, UserService $userService,UploadRepository $uploadRepository)
+    public function __construct(UserRepository $userRepository, UserService $userService, PostRepository $postRepository, PostService $postService,UploadRepository $uploadRepository)
     {
         $this->userRepository = $userRepository;
         $this->userService = $userService;
+        $this->postRepository = $postRepository;
         $this->uploadRepository = $uploadRepository;
+        $this->postService = $postService;
     }
 
     /**
@@ -55,6 +63,13 @@ class PostController extends \BaseController
     public function store()
     {
         //
+        $data = Input::all();
+
+        $this->postService->create($data);
+
+        return Response::json(array(
+            'success' => true
+        ));
     }
 
     /**

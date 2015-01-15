@@ -10,6 +10,7 @@ namespace Repositories;
 
 
 use Core\BaseRepository;
+use \Shop;
 
 class ShopRepository implements BaseRepository{
     public function errors($code)
@@ -30,6 +31,9 @@ class ShopRepository implements BaseRepository{
     public function getWhere($column, $value, array $related = null)
     {
         // TODO: Implement getWhere() method.
+        $shop = Shop::where($column,$value)->first();
+
+        return $shop;
     }
 
     public function getRecent(array $related = null)
@@ -40,6 +44,11 @@ class ShopRepository implements BaseRepository{
     public function create(array $data)
     {
         // TODO: Implement create() method.
+        if (!empty($data)){
+            $shop = Shop::create($data);
+        }
+
+        return $shop;
     }
 
     public function update($model, array $data)
@@ -57,4 +66,9 @@ class ShopRepository implements BaseRepository{
         // TODO: Implement deleteWhere() method.
     }
 
+    public function search($type){
+        $shop =  Shop::where('address', 'LIKE', '%'.$type.'%' )->take(5)->get();
+
+        return $shop;
+    }
 }

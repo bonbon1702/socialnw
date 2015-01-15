@@ -27,7 +27,7 @@ class FollowService implements BaseService{
         // TODO: Implement create() method.
     }
 
-    public function update(array $data)
+    public function update($model, array $data)
     {
         // TODO: Implement update() method.
     }

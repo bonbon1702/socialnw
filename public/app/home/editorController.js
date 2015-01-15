@@ -30,8 +30,7 @@
                 }
                 editorService.save(data)
                     .success(function(data) {
-                        //document.location.href = photo.data('href');
-                        console.log(data);
+                        document.location.href = photo.data('href');
                     })
                     .error(function(data) {
                         console.log(data);

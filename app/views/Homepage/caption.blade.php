@@ -16,14 +16,14 @@
             </div>
         </div>
         <div style="width: 500px">
-            <magiccard template-url="../app/home/templates/templateTag.html" src="{{ asset($upload->image_editor_url) }}" callback="callback" data="movies"></magiccard>
+            <magiccard template-url="../app/home/templates/templateTag.html" src="{{ asset($upload->image_url_editor) }}" callback="callback" data="shop" update="update"></magiccard>
         </div>
         <input ng-model="caption" type="text"/>
         <div ng-repeat="point in points track by $index">
             <h3>@{{ $index+1 }}-@{{ point.name }} - @{{ point.price }} - @{{ point.address }} - <a href="#" ng-click="deletepoint($index)" class="text-muted">Delete</a></h3>
         </div>
         <button id="tagButton">Click to tag</button>
-        <button ng-click="submit()">Submit</button>
+        <button ng-click="submit('{{ $upload->id }}')">Submit</button>
     </div>
 </div>
 @stop
