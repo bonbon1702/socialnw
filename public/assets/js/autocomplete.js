@@ -209,6 +209,16 @@ app.directive('autocomplete', function() {
                         break;
                     case key.right:
                     case key.enter:
+
+                        index = scope.getIndex();
+                        // scope.preSelectOff();
+                        if(index !== -1) {
+                            scope.select(angular.element(angular.element(this).find('li')[index]).find("span#address").text());
+                        }
+                        scope.setIndex(-1);
+                        scope.$apply();
+
+                        break;
                     case key.tab:
 
                         index = scope.getIndex();
@@ -253,10 +263,11 @@ app.directive('autocomplete', function() {
               suggestion\
               ng-repeat="suggestion in suggestions | filter:searchFilter | orderBy:\'toString()\' track by $index"\
               index="{{ $index }}"\
-              val="{{ suggestion.name }}"\
               ng-class="{ active: ($index === selectedIndex) }"\
-              ng-click="select(suggestion.name)"\
-              ng-bind-html="suggestion.name | highlight:searchParam : suggestion.name"></li>\
+              ng-click="select(suggestion.address)">\
+                  <span>{{ suggestion.name }}</span>\
+                  <span ng-bind-html="suggestion.address | highlight:searchParam : suggestion.address" id="address"></span>\
+              </li>\
           </ul>\
         </div>'
     };

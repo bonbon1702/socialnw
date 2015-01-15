@@ -79,6 +79,7 @@
     {{ HTML::script('assets/js/libs/jquery.notyfy.js') }}
     {{ HTML::script('assets/js/libs/jquery.prettyPhoto.js') }}
     {{ HTML::script('assets/js/libs/modernizr.js') }}
+    {{ HTML::script('assets/js/libs/caman.full.min.js') }}
 
 
     <!-- load angularjs file -->

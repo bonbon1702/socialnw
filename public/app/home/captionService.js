@@ -20,7 +20,8 @@
                 return $http({
                     method: 'POST',
                     url: '../api/shop',
-                    data: data
+                    data: data,
+                    ignoreLoadingBar: true
                 });
             }
         }

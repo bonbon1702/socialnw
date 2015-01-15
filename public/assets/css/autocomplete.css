@@ -36,10 +36,14 @@
 }
 
 .autocomplete .highlight {
-    background-color: #E2E2E2;
+    background-color: #00FF00;
 }
 
 .autocomplete li.active .highlight {
     background: #666;
     color: #fff;
+}
+
+.autocomplete li span#address{
+    display: block;
 }

@@ -62,7 +62,7 @@ class PostService implements BaseService{
         foreach ($points as $v){
             $result = $this->googleMapHelper->findCoordinate($v['address']);
 
-            $shop = $this->shopService->checkCoordinates($result[0]->getLatitude(), $result[0]->getLongitude());
+            $shop = $this->shopService->checkCoordinates($result);
 
 
             $this->tagPictureService->create(array(

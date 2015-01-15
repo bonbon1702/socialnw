@@ -40,7 +40,10 @@ class ShopService implements BaseService{
         // TODO: Implement delete() method.
     }
 
-    public function checkCoordinates($lat, $long){
+    public function checkCoordinates($result){
+        $lat = $result[0]->getLatitude();
+        $long = $result[0]->getLongitude();
+        $address = $result[0]->getStreetNumber().' '. $result[0]->getStreetName(). ' '. $result[0]->getCounty(). ' '. $result[0]->getCountry();
         $shop_1 = $this->shopRepository->getWhere('lat', $lat);
 
         $shop_2 = $this->shopRepository->getWhere('long', $long);
@@ -50,12 +53,11 @@ class ShopService implements BaseService{
             }
         }
 
-        $re = $this->googleMapHelper->findAddress($lat,$long);
 
         $shop = $this->shopRepository->create(array(
             'lat' => $lat,
             'long' => $long,
-            'address' => $re[0]->getStreetNumber().' '. $re[0]->getStreetName(). ' '. $re[0]->getCounty(). ' '. $re[0]->getCountry()
+            'address' => $address
         ));
 
         return $shop;
